@@ -10,17 +10,19 @@ public class User {
 	@GeneratedValue
 	private long id;
 	@Column(unique=true)
-	private String dni;
+	private String email;
 	private String name;
 	private String lastName;
 	
     private String password;
     @Transient //Specifies that the property or field is not persistent. 
     private String passwordConfirm;
+    
+    
 
-	public User(String dni, String name, String lastName) {
+	public User(String email, String name, String lastName) {
 		super();
-		this.dni = dni;
+		this.email = email;
 		this.name = name;
 		this.lastName = lastName;
 	}
@@ -54,12 +56,12 @@ public class User {
 		this.id = id;
 	}
 
-	public String getDni() {
-		return dni;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setDni(String dni) {
-		this.dni = dni;
+	public void setEmail(String dni) {
+		this.email = dni;
 	}
 
 	public String getName() {

@@ -2,10 +2,9 @@ package com.uniovi.controllers;
 
 
 import org.springframework.beans.factory.annotation.*;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import com.uniovi.entities.*;
 import com.uniovi.services.UsersService;
@@ -25,13 +24,10 @@ public class UsersController {
 	}
 	
 	@RequestMapping(value = "/signup", method = RequestMethod.POST)
-	public String signup(@Validated User user, BindingResult result, Model model) {
-		if (result.hasErrors()) {
-			return "signup";
-		}
+	public String signup(@ModelAttribute User user, Model model) {
 
 		usersService.addUser(user);
-		return "redirect:index";
+		return "redirect:/";
 	}
 	
 
