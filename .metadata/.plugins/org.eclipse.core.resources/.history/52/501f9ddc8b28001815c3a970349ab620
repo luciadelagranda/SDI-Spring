@@ -1,0 +1,65 @@
+package com.uniovi.entities;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+
+public class Peticion {
+
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	@OneToOne
+	private User usuarioPeticionado;
+	
+	@ManyToOne
+	private User usuarioPeticionador;
+	
+	boolean aceptada;
+	
+	public Peticion(User usuarioPeticionado, User usuarioPeticionador) {
+		super();
+		this.usuarioPeticionado = usuarioPeticionado;
+		this.usuarioPeticionador = usuarioPeticionador;
+	}
+	
+	Peticion() {
+	}
+
+	public User getUsuarioPeticionado() {
+		return usuarioPeticionado;
+	}
+
+	public void setUsuarioPeticionado(User usuarioPeticionado) {
+		this.usuarioPeticionado = usuarioPeticionado;
+	}
+
+	public User getUsuarioPeticionador() {
+		return usuarioPeticionador;
+	}
+
+	public void setUsuarioPeticionador(User usuarioPeticionador) {
+		this.usuarioPeticionador = usuarioPeticionador;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public boolean isAceptada() {
+		return aceptada;
+	}
+
+	public void setAceptada(boolean aceptada) {
+		this.aceptada = aceptada;
+	}
+
+	
+	
+}
