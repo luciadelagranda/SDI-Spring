@@ -74,7 +74,7 @@ public class UsersController {
 	@RequestMapping("/user/list/update")
 	public String updateList(Model model, Pageable pageable) { 
 		Page<User> users = usersService.getUsers(pageable);
-		model.addAttribute("userList", users.getContent());
+		model.addAttribute("usersList", users.getContent());
 		return "user/list :: tableUser";
 	}
 	
@@ -84,8 +84,9 @@ public class UsersController {
 		Authentication sesion = SecurityContextHolder.getContext().getAuthentication();
 		String email = sesion.getName();
 		User user = usersService.getUserByEmail(email);
-		user.setPeticionado(true);
+		usersService.setPeticionEnviada(id);
 		peticionService.makePeticion(friend.getId(),user.getId());
-		return "redirect:/mark/list";
+		
+		return "redirect:/user/list";
 	}
 }

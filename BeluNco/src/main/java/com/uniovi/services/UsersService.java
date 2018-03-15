@@ -63,10 +63,11 @@ public class UsersService {
 	}
 
 
-	public void makePeticion(User friend, User user) {
-		//usersRepository.addPeticion(friend.getId(),user.getId());
+	public void setPeticionEnviada(Long id) {
+		usersRepository.updatePeticion(id);
 		
 	}
+
 
 	
 	
