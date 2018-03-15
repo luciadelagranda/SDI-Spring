@@ -1,6 +1,5 @@
 package com.uniovi.controllers;
 
-import java.security.Principal;
 import java.util.LinkedList;
 
 import org.springframework.beans.factory.annotation.*;
@@ -14,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import com.uniovi.entities.*;
+import com.uniovi.services.PeticionService;
 import com.uniovi.services.SecurityService;
 import com.uniovi.services.UsersService;
 import com.uniovi.validators.SignUpFormValidator;
@@ -29,6 +29,9 @@ public class UsersController {
 
 	@Autowired
 	private SignUpFormValidator signUpFormValidator;
+	
+	@Autowired
+	private PeticionService peticionService;
 
 	@RequestMapping(value = "/signup", method = RequestMethod.GET)
 	public String signup(Model model) {
@@ -82,8 +85,7 @@ public class UsersController {
 		String email = sesion.getName();
 		User user = usersService.getUserByEmail(email);
 		user.setPeticionado(true);
-		usersService.makePeticion(friend,user);
-		usersService.update(user);
+		peticionService.makePeticion(friend.getId(),user.getId());
 		return "redirect:/mark/list";
 	}
 }
