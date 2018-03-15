@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.*;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -62,7 +64,26 @@ public class UsersController {
 
 		model.addAttribute("usersList", users.getContent());
 		model.addAttribute("page", users);
+		
 		return "user/list";
 	}
-
+	
+	@RequestMapping("/user/list/update")
+	public String updateList(Model model, Pageable pageable) { 
+		Page<User> users = usersService.getUsers(pageable);
+		model.addAttribute("userList", users.getContent());
+		return "user/list :: tableUser";
+	}
+	
+	@RequestMapping(value = "/user/{id}/makePeticion", method = RequestMethod.GET)
+	public String makePeticion(Model model, @PathVariable Long id) {
+		User friend = usersService.getUser(id);
+		Authentication sesion = SecurityContextHolder.getContext().getAuthentication();
+		String email = sesion.getName();
+		User user = usersService.getUserByEmail(email);
+		user.setPeticionado(true);
+		usersService.makePeticion(friend,user);
+		usersService.update(user);
+		return "redirect:/mark/list";
+	}
 }
