@@ -13,7 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import com.uniovi.entities.*;
-import com.uniovi.services.PeticionService;
+import com.uniovi.services.PeticionesService;
 import com.uniovi.services.SecurityService;
 import com.uniovi.services.UsersService;
 import com.uniovi.validators.SignUpFormValidator;
@@ -26,6 +26,10 @@ public class UsersController {
 
 	@Autowired
 	private SecurityService securityService;
+	
+	@Autowired
+	private PeticionesService peticionesService;
+
 
 	@Autowired
 	private SignUpFormValidator signUpFormValidator;
@@ -85,7 +89,9 @@ public class UsersController {
 		String email = sesion.getName();
 		User user = usersService.getUserByEmail(email);
 		user.setPeticionado(true);
-		peticionService.makePeticion(friend.getId(),user.getId());
+		Peticion peticion = new Peticion(friend.getId(), user.getId());
+		peticionesService.addPeticion(peticion);
 		return "redirect:/mark/list";
 	}
+	
 }
