@@ -1,6 +1,5 @@
 package com.uniovi.controllers;
 
-import java.security.Principal;
 import java.util.LinkedList;
 
 import org.springframework.beans.factory.annotation.*;
@@ -34,6 +33,9 @@ public class UsersController {
 
 	@Autowired
 	private SignUpFormValidator signUpFormValidator;
+	
+	@Autowired
+	private PeticionService peticionService;
 
 	@RequestMapping(value = "/signup", method = RequestMethod.GET)
 	public String signup(Model model) {
