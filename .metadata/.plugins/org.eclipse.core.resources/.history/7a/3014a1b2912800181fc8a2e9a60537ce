@@ -54,6 +54,7 @@ public class UsersService {
 
 	public void update(User user) {
 		usersRepository.save(user);
+		
 	}
 
 	public User getUser(Long id) {

@@ -86,10 +86,9 @@ public class UsersController {
 		Authentication sesion = SecurityContextHolder.getContext().getAuthentication();
 		String email = sesion.getName();
 		User user = usersService.getUserByEmail(email);
+		user.setPeticionado(true);
 		Peticion peticion = new Peticion(friend.getId(), user.getId());
 		peticionesService.addPeticion(peticion);
-		friend.setPeticionado(true);
-		usersService.update(friend);
 		return "redirect:/mark/list";
 	}
 	
