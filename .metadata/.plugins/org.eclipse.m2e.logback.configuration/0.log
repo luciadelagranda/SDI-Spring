@@ -321,3 +321,8 @@
 2018-03-15 21:44:47,195 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
 2018-03-16 08:46:54,215 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2018-03-16 10:06:39,597 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-03-16 10:08:08,035 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 10:08:08,044 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 10:08:08,077 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 22 resources
+2018-03-16 10:08:08,404 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 10:08:08,405 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
