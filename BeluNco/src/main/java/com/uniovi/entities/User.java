@@ -1,7 +1,5 @@
 package com.uniovi.entities;
 
-import java.util.HashSet;
-import java.util.Set;
 
 import javax.persistence.*;
 
@@ -17,17 +15,17 @@ public class User {
 	private String email;
 	private String name;
 	private String lastName;
+	
+	private Boolean peticionado= false;
+	
     private String password;
-
-    @Transient 
+    @Transient //Specifies that the property or field is not persistent. 
     private String passwordConfirm;
     
-	private Boolean peticionado= false;
+//    @ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
+//    @JoinTable(name="friends", joinColumns = @JoinColumn( name = "FRIEND_ID"), inverseJoinColumns = @JoinColumn(name = "USER_ID"))
+//    private Set<User> friends = new HashSet<User>();
     
-        
-
-	public User() {
-	}
     
 	public User(String email, String name, String lastName) {
 		super();
@@ -35,6 +33,8 @@ public class User {
 		this.name = name;
 		this.lastName = lastName;
 	}
+	
+	
 
     public String getPassword() {
         return password;
@@ -51,6 +51,10 @@ public class User {
     public void setPasswordConfirm(String passwordConfirm) {
         this.passwordConfirm = passwordConfirm;
     }
+
+
+	public User() {
+	}
 
 	public long getId() {
 		return id;
@@ -93,8 +97,11 @@ public class User {
 		return peticionado;
 	}
 
+
+
 	public void setPeticionado(boolean peticionado) {
 		this.peticionado = peticionado;
 	}
+	
 
 }

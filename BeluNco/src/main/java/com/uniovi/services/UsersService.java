@@ -29,6 +29,7 @@ public class UsersService {
 
 	}
 	
+
 	public Page<User> getUsers(Pageable pageable) {
 		Page<User> users = usersRepository.findAll(pageable);
 		return users;
@@ -50,12 +51,16 @@ public class UsersService {
 		return users;
 	}
 
+
 	public void update(User user) {
 		usersRepository.save(user);
+		
 	}
+
 
 	public User getUser(Long id) {
 		return usersRepository.findOne(id);
-	}	
+	}
+	
 	
 }

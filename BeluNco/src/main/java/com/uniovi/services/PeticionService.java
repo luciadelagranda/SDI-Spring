@@ -1,9 +1,12 @@
 package com.uniovi.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.uniovi.entities.Peticion;
+import com.uniovi.entities.User;
 import com.uniovi.repositories.PeticionRepository;
 
 @Service
@@ -16,5 +19,8 @@ public class PeticionService {
 		peticionRepository.save(new Peticion(id, id2 ));
 		
 	}
-
+	
+	public List<Long> getUsersPeticionados(long l) {
+		return peticionRepository.searchUsuariosPeticionados(l);
+	}
 }

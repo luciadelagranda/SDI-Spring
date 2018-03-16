@@ -32,12 +32,14 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr th:each="user : ${usersList}">
+					<tr th:each="user : ${usersList}" th:object="${user}"
+					    th:if="${user.email} != ${#authentication.getPrincipal().getUsername()}"  >
 						<td th:text="${user.email}">71888888X</td>
 						<td th:text="${user.name}">Nombre del alumno</td>
 						<td th:text="${user.lastName}">Apellidos del alumno</td>
-						<td th:if="${!user.peticionado}">
-						<button type=" button" th:id="${'peticionButton' + user.id}" class="btn btn-info">AÑADIR AMIGO
+						
+						<td th:if="${#bools.isFalse(#lists.contains(peticionsList, user.id))}">
+						<button type=" button" th:id="${'peticionButton' + user.id}" class="btn btn-if">AÑADIR AMIGO
 								</button> 
 								<script th:inline="javascript">
 									/*<![CDATA[*/
@@ -53,12 +55,13 @@
 													
 													
 												});
+												$("#peticionButton[[${user.id}]]").attr('disabled', true);
 											});
 									/*]]>*/
 								</script>
 						</td>
-						<td th:unless="${!user.peticionado}">
-							<button type=" button" th:id="${'peticionButton' + user.id}" class="btn btn-info">AÑADIR AMIGO
+						<td th:unless="${#bools.isFalse(#lists.contains(peticionsList, user.id))}">
+							<button type=" button" th:id="${'peticionButton' + user.id}" class="btn btn-warning">PETICIÓN ENVIADA
 								</button>
 							<script th:inline="javascript">
 									/*<![CDATA[*/
