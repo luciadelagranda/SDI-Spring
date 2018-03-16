@@ -61,14 +61,6 @@ public class UsersService {
 	public User getUser(Long id) {
 		return usersRepository.findOne(id);
 	}
-
-
-	public void setPeticionEnviada(Long id) {
-		usersRepository.updatePeticion(id);
-		
-	}
-
-
 	
 	
 }

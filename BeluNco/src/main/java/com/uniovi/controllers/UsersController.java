@@ -1,6 +1,9 @@
 package com.uniovi.controllers;
 
+import java.security.Principal;
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.data.domain.Page;
@@ -57,14 +60,18 @@ public class UsersController {
 
 	@RequestMapping("/user/list")
 	public String getListado(Model model, 
-			@RequestParam(value = "", required = false) String searchText, Pageable pageable) {
+			@RequestParam(value = "", required = false) String searchText, Pageable pageable, Principal principal) {
 		Page<User> users = new PageImpl<User>(new LinkedList<User>());
 		if (searchText != null && !searchText.isEmpty()) {
 			users = usersService.searchByEmailAndName(searchText, pageable);
 		} else {
 			users = usersService.getUsers(pageable);
 		}
-
+		String email = principal.getName();
+		User user = usersService.getUserByEmail(email);
+		
+		List<Long> peticionList = peticionService.getUsersPeticionados(user.getId());
+		model.addAttribute("peticionsList", peticionList);
 		model.addAttribute("usersList", users.getContent());
 		model.addAttribute("page", users);
 		
@@ -84,7 +91,6 @@ public class UsersController {
 		Authentication sesion = SecurityContextHolder.getContext().getAuthentication();
 		String email = sesion.getName();
 		User user = usersService.getUserByEmail(email);
-		usersService.setPeticionEnviada(id);
 		peticionService.makePeticion(friend.getId(),user.getId());
 		
 		return "redirect:/user/list";
