@@ -44,6 +44,10 @@ public class UsersService {
 		return usersRepository.findByEmail(email);
 	}
 	
+	public User getUserById(Long email) {
+		return usersRepository.findById(email);
+	}
+	
 	public Page<User> searchByEmailAndName(String searchText, Pageable pageable) {
 		Page<User> users =  new PageImpl<User>(new LinkedList<User>());
 		searchText = "%"+searchText+"%";

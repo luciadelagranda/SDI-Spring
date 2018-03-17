@@ -70,7 +70,7 @@ public class UsersController {
 		String email = principal.getName();
 		User user = usersService.getUserByEmail(email);
 		
-		List<Long> peticionList = peticionService.getUsersPeticionados(user.getId());
+		Page<Long> peticionList = peticionService.getUsersPeticionados(pageable, user.getId());
 		model.addAttribute("peticionsList", peticionList);
 		model.addAttribute("usersList", users.getContent());
 		model.addAttribute("page", users);
