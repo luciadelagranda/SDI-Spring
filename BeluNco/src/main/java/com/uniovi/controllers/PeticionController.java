@@ -9,7 +9,9 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+
 import org.springframework.web.bind.annotation.RequestMapping;
+
 
 import com.uniovi.entities.User;
 import com.uniovi.services.PeticionService;
@@ -30,10 +32,24 @@ public class PeticionController {
 		Page<User> lista = new PageImpl<User>(new LinkedList<User>());
 		String email = principal.getName();
 		User user = usersService.getUserByEmail(email);
-		Page<Long> peticionList = peticionService.getUsuariosPeticiones(pageable, user.getId());
-		lista = peticionService.getUsersPeti(peticionList, pageable);
+		lista = peticionService.getUsuariosPeticionadores(pageable, user);
+		Page<User> friendsList = user.getFriendsList();
+		model.addAttribute("friendsList", friendsList.getContent());
 		model.addAttribute("peticionUserList", lista.getContent());
 		model.addAttribute("page", lista);
 		return "peticion/list";
 	}
+	
+	
+	@RequestMapping("/peticion/list/update")
+	public String updateList(Model model, Pageable pageable, Principal principal) {
+		String email = principal.getName();
+		User user = usersService.getUserByEmail(email);
+		Page<User> users = peticionService.getUsuariosPeticionadores(pageable,user);
+		model.addAttribute("peticionUserList", users.getContent());
+		return "peticion/list :: tableUserPeticion";
+	}
+	
+	
+	
 }
