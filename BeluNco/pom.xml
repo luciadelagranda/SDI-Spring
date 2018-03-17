@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.uniovi</groupId>
-	<artifactId>Notaneitor</artifactId>
+	<artifactId>Belunco</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>Notaneitor</name>
-	<description>Aplicación para la gestión de notas</description>
+	<name>Belunco</name>
+	<description>Aplicación para una red social</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -61,6 +61,7 @@
 			<artifactId>hsqldb</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

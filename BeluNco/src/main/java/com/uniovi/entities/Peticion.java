@@ -7,7 +7,7 @@ import javax.persistence.Id;
 @Entity
 public class Peticion {
 
-    @Id
+	@Id
     @GeneratedValue
     private Long id;
 

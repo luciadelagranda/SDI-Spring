@@ -11,7 +11,7 @@
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav" sec:authorize="isAuthenticated()">
-					<li><a href="/user/list">Ver Usuarios</a></li>
+					<li><a href="/user/list" th:text="#{list.seeUsers}">Ver Usuarios</a></li>
 					<li><a href="/peticion/list">Ver peticiones</a></li>
 				
 			</ul>
@@ -24,7 +24,8 @@
 					th:text="#{login.message}"> <span
 						class="glyphicon glyphicon-log-in"></span> Identifícate
 				</a></li>
-				<li sec:authorize="isAuthenticated()"><a href="/logout"> <span
+				<li sec:authorize="isAuthenticated()"><a href="/logout" 
+					th:text="#{login.desconect}"> <span
 						class="glyphicon glyphicon-log-out"></span> Desconectar
 				</a></li>
 			</ul>

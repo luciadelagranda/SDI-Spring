@@ -1,17 +1,13 @@
 package com.uniovi.services;
 
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
-import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
 
@@ -39,18 +35,18 @@ public class PeticionService {
 	}
 	
 
-	public Page<Long> getUsersPeticionados(Pageable pageable, long l) {
+	public Page<Long> getUsersPeticionados(Pageable pageable, Long l) {
 		return peticionRepository.searchUsuariosPeticionados(pageable, l);
 	}
 	
-	public Page<Long> getUsuariosPeticiones(Pageable pageable, long id){
+	public Page<Long> getUsuariosPeticiones(Pageable pageable, Long id){
 		return peticionRepository.searchUsuariosPeticionadores(pageable, id);
 	}
 	
 	public Page<User> getUsersPeti(Page<Long> peticionList, Pageable pageable){
 		Page<User> res =  new PageImpl<User>(new LinkedList<User>());
 		for(int i=0;i<peticionList.getContent().size();i++){
-			res.getContent().add(usersRepository.findById(peticionList.getContent().get(i)));
+			res.getContent().add(usersRepository.findOne(peticionList.getContent().get(i)));
 		}
 		return res;
 	}

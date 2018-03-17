@@ -1,9 +1,7 @@
 package com.uniovi.controllers;
 
 import java.security.Principal;
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -35,6 +33,7 @@ public class PeticionController {
 		Page<Long> peticionList = peticionService.getUsuariosPeticiones(pageable, user.getId());
 		lista = peticionService.getUsersPeti(peticionList, pageable);
 		model.addAttribute("peticionUserList", lista.getContent());
+		model.addAttribute("page", lista);
 		return "peticion/list";
 	}
 }
