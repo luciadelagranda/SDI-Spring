@@ -1,9 +1,8 @@
 package com.uniovi.controllers;
 
 import java.security.Principal;
-import java.util.ArrayList;
+
 import java.util.LinkedList;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
