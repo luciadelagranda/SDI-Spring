@@ -19,4 +19,5 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.springframework.data.domain.Page"/>
 <fullyQualifiedTypeName name="org.springframework.data.domain.Pageable"/>
+<fullyQualifiedTypeName name="com.uniovi.repositories.UsersRepository"/>
 </qualifiedTypeNameHistroy>
