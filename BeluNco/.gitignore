@@ -53,6 +53,7 @@ target/
 
 # Code Recommenders
 .recommenders/
+.metadata/
 
 .DS_Store
 
