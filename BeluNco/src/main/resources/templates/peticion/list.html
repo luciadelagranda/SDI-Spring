@@ -20,8 +20,31 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr th:each="user : ${peticionUserList}">
-						<td th:text="${user.email}">defaultEmail</td>						
+					<tr th:each="user : ${peticionUserList}" th:object="${user}"
+						th:if= "${#bools.isFalse(#lists.contains(friendsList,user))}"/>
+						<td th:text="${user.email}">defaultEmail</td>
+						<td>
+						<button type=" button" th:id="${'solicitudButton' + user.id}" class="btn btn-if">ACEPTAR SOLICITUD
+								</button> 
+								<script th:inline="javascript">
+									/*<![CDATA[*/
+									$("#solicitudButton[[${user.id}]]")
+											.click(function() { 
+												$.get( "/user/[[${user.id}]]/addFriend",function(data) {
+													 var numberPage = [[${param.page}]];
+													 var urlUpdate = '/peticion/list/update';
+													 if ( numberPage != null ){
+													 urlUpdate += "?page="+numberPage[0];
+													 }
+													$("#tableUserPeticion").load(urlUpdate);
+													
+													
+												});
+												$("#solicitudButton[[${user.id}]]").attr('disabled', true);
+											});
+									/*]]>*/
+								</script>	
+						</td>				
 					</tr>
 				</tbody>
 			</table>

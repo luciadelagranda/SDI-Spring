@@ -1,6 +1,7 @@
 package com.uniovi.controllers;
 
 import java.security.Principal;
+
 import java.util.LinkedList;
 
 import org.springframework.beans.factory.annotation.*;
@@ -46,13 +47,14 @@ public class UsersController {
 		if (result.hasErrors()) {
 			return "signup";
 		}
-		usersService.addUser(user);
+		usersService.saveUser(user);
 		securityService.autoLogin(user.getEmail(), user.getPasswordConfirm());
 		return "redirect:";
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String login(Model model) {
+	public String login(Model model, @RequestParam(name = "error", required = false) String error) {
+		model.addAttribute("error", error);
 		return "login";
 	}
 
@@ -69,6 +71,8 @@ public class UsersController {
 		User user = usersService.getUserByEmail(email);
 		
 		Page<User> peticionList = peticionService.getUsersPeticionados(pageable, user.getId());
+		Page<User> friendsList = user.getFriendsList();
+		model.addAttribute("friendsList", friendsList.getContent());
 		model.addAttribute("peticionsList", peticionList.getContent());
 		model.addAttribute("usersList", users.getContent());
 		model.addAttribute("page", users);
@@ -90,6 +94,22 @@ public class UsersController {
 		String email = sesion.getName();
 		User user = usersService.getUserByEmail(email);
 		peticionService.makePeticion(friend,user);
+		
+		return "redirect:/user/list";
+	}
+	
+	@RequestMapping(value = "/user/{id}/addFriend", method = RequestMethod.GET)
+	public String addFriend(Model model, @PathVariable Long id) {
+		User friend = usersService.getUser(id);
+		Authentication sesion = SecurityContextHolder.getContext().getAuthentication();
+		String email = sesion.getName();
+		User user = usersService.getUserByEmail(email);
+		//El ususario en sesion es el que acepta, "el amigo", por eso los parametros estan al reves
+		if(peticionService.isPeticion(user,friend)) {
+			user.addFriend(friend);
+			usersService.saveUser(user);
+			peticionService.removePeticion(user,friend);
+		}
 		
 		return "redirect:/user/list";
 	}
