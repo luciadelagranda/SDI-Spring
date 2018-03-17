@@ -1,5 +1,6 @@
 package com.uniovi.services;
 
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -8,11 +9,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 
 import com.uniovi.entities.Peticion;
 import com.uniovi.entities.User;
 import com.uniovi.repositories.PeticionRepository;
+
 import com.uniovi.repositories.UsersRepository;
 
 @Service
@@ -24,14 +30,15 @@ public class PeticionService {
 	@Autowired
 	private UsersRepository usersRepository;
 
-	@Autowired
-	private UsersService us;
+
 	
+
 	public void makePeticion(long id, long id2) {
 		peticionRepository.save(new Peticion(id, id2 ));
 		
 	}
 	
+
 	public Page<Long> getUsersPeticionados(Pageable pageable, long l) {
 		return peticionRepository.searchUsuariosPeticionados(pageable, l);
 	}
@@ -48,4 +55,5 @@ public class PeticionService {
 		return res;
 	}
 	
+
 }
