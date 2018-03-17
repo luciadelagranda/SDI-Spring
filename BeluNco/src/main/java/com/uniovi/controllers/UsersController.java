@@ -53,7 +53,8 @@ public class UsersController {
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String login(Model model) {
+	public String login(Model model, @RequestParam(name = "error", required = false) String error) {
+		model.addAttribute("error", error);
 		return "login";
 	}
 
