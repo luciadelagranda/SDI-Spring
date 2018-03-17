@@ -1,9 +1,7 @@
 package com.uniovi.controllers;
 
 import java.security.Principal;
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.data.domain.Page;
@@ -70,8 +68,8 @@ public class UsersController {
 		String email = principal.getName();
 		User user = usersService.getUserByEmail(email);
 		
-		Page<Long> peticionList = peticionService.getUsersPeticionados(pageable, user.getId());
-		model.addAttribute("peticionsList", peticionList);
+		Page<User> peticionList = peticionService.getUsersPeticionados(pageable, user.getId());
+		model.addAttribute("peticionsList", peticionList.getContent());
 		model.addAttribute("usersList", users.getContent());
 		model.addAttribute("page", users);
 		
@@ -91,7 +89,7 @@ public class UsersController {
 		Authentication sesion = SecurityContextHolder.getContext().getAuthentication();
 		String email = sesion.getName();
 		User user = usersService.getUserByEmail(email);
-		peticionService.makePeticion(friend.getId(),user.getId());
+		peticionService.makePeticion(friend,user);
 		
 		return "redirect:/user/list";
 	}

@@ -38,7 +38,7 @@
 						<td th:text="${user.name}">Nombre del alumno</td>
 						<td th:text="${user.lastName}">Apellidos del alumno</td>
 						
-						<td th:if="${#bools.isFalse(#lists.contains(peticionsList, user.id))}">
+						<td th:if="${#bools.isFalse(#lists.contains(peticionsList, user))}">
 						<button type=" button" th:id="${'peticionButton' + user.id}" class="btn btn-if">AÑADIR AMIGO
 								</button> 
 								<script th:inline="javascript">
@@ -60,7 +60,7 @@
 									/*]]>*/
 								</script>
 						</td>
-						<td th:unless="${#bools.isFalse(#lists.contains(peticionsList, user.id))}">
+						<td th:unless="${#bools.isFalse(#lists.contains(peticionsList, user))}">
 							<button type=" button" th:id="${'peticionButton' + user.id}" class="btn btn-warning">PETICIÓN ENVIADA
 								</button>
 							<script th:inline="javascript">
