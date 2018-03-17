@@ -1,7 +1,11 @@
 package com.uniovi.entities;
 
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.*;
+
 
 
 
@@ -21,6 +25,13 @@ public class User {
     private String password;
     @Transient //Specifies that the property or field is not persistent. 
     private String passwordConfirm;
+    
+    
+    @OneToMany(mappedBy="usuarioPeticionador", cascade=CascadeType.ALL)
+    private Set<Peticion> peticionesEnviadas = new HashSet<Peticion>();
+    
+    @OneToMany(mappedBy="usuarioPeticionado", cascade=CascadeType.ALL)
+    private Set<Peticion> peticionesRecibidas = new HashSet<Peticion>();
     
 //    @ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
 //    @JoinTable(name="friends", joinColumns = @JoinColumn( name = "FRIEND_ID"), inverseJoinColumns = @JoinColumn(name = "USER_ID"))

@@ -3,6 +3,7 @@ package com.uniovi.entities;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Peticion {
@@ -10,12 +11,14 @@ public class Peticion {
     @Id
     @GeneratedValue
     private Long id;
+    
+    @ManyToOne
+    private User usuarioPeticionado;
 
-    private Long usuarioPeticionado;
+    @ManyToOne
+    private User usuarioPeticionador;
 
-    private Long usuarioPeticionador;
-
-    public Peticion(Long usuarioPeticionado, Long usuarioPeticionador) {
+    public Peticion(User usuarioPeticionado, User usuarioPeticionador) {
         super();
         this.usuarioPeticionado = usuarioPeticionado;
         this.usuarioPeticionador = usuarioPeticionador;
@@ -24,19 +27,19 @@ public class Peticion {
     Peticion() {
     }
 
-    public Long getUsuarioPeticionado() {
+    public User getUsuarioPeticionado() {
         return usuarioPeticionado;
     }
 
-    public void setUsuarioPeticionado(Long usuarioPeticionado) {
+    public void setUsuarioPeticionado(User usuarioPeticionado) {
         this.usuarioPeticionado = usuarioPeticionado;
     }
 
-    public Long getUsuarioPeticionador() {
+    public User getUsuarioPeticionador() {
         return usuarioPeticionador;
     }
 
-    public void setUsuarioPeticionador(Long usuarioPeticionador) {
+    public void setUsuarioPeticionador(User usuarioPeticionador) {
         this.usuarioPeticionador = usuarioPeticionador;
     }
 

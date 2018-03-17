@@ -10,18 +10,19 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import com.uniovi.entities.Peticion;
+import com.uniovi.entities.User;
 
 
 
 
 public interface PeticionRepository extends CrudRepository<Peticion, Long>{
 	
-	@Query("SELECT c.usuarioPeticionado FROM Peticion c WHERE c.usuarioPeticionador = ?1 ORDER BY c.usuarioPeticionado ASC")
+	@Query("SELECT c.usuarioPeticionado FROM Peticion c WHERE c.usuarioPeticionador.id = ?1 ORDER BY c.usuarioPeticionado.id ASC")
 
-	Page<Long> searchUsuariosPeticionados(Pageable pageable, long l);
+	Page<User> searchUsuariosPeticionados(Pageable pageable, Long l);
 	
-	@Query("SELECT c.usuarioPeticionador FROM Peticion c WHERE c.usuarioPeticionado = ?1")
-	Page<Long> searchUsuariosPeticionadores(Pageable pageable, long l);
+	@Query("SELECT c.usuarioPeticionador FROM Peticion c WHERE c.usuarioPeticionado.id = ?1")
+	Page<User> searchUsuariosPeticionadores(Pageable pageable, Long l);
 
 	
 }
