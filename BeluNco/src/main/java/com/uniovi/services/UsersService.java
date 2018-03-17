@@ -2,7 +2,9 @@ package com.uniovi.services;
 
 import java.util.*;
 
+
 import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -42,10 +44,27 @@ public class UsersService {
 		return usersRepository.findByEmail(email);
 	}
 	
+	public User getUserById(Long email) {
+		return usersRepository.findById(email);
+	}
+	
 	public Page<User> searchByEmailAndName(String searchText, Pageable pageable) {
 		Page<User> users =  new PageImpl<User>(new LinkedList<User>());
 		searchText = "%"+searchText+"%";
 		users = usersRepository.searchByEmailAndName(pageable, searchText);
 		return users;
 	}
+
+
+	public void update(User user) {
+		usersRepository.save(user);
+		
+	}
+
+
+	public User getUser(Long id) {
+		return usersRepository.findOne(id);
+	}
+	
+	
 }

@@ -1,0 +1,39 @@
+package com.uniovi.controllers;
+
+import java.security.Principal;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.uniovi.entities.User;
+import com.uniovi.services.PeticionService;
+import com.uniovi.services.UsersService;
+
+@Controller
+public class PeticionController {
+
+	@Autowired
+	public UsersService usersService;
+	
+	@Autowired
+	public PeticionService peticionService;
+	
+	
+	@RequestMapping("/peticion/list")
+	public String getListadoPeticiones(Model model, Pageable pageable, Principal principal) {
+		String email = principal.getName();
+		User user = usersService.getUserByEmail(email);
+		List<Long> peticionList = peticionService.getUsuariosPeticiones(user.getId());
+		List<User> lista = new ArrayList<User>();
+		for(int i=0;i<peticionList.size();i++){
+			lista.add(usersService.getUserById(peticionList.get(i)));
+		}
+		model.addAttribute("peticionUserList", lista);
+		return "peticion/list";
+	}
+}

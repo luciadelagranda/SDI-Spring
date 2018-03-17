@@ -1,0 +1,23 @@
+package com.uniovi.repositories;
+
+import java.util.List;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+
+import com.uniovi.entities.Peticion;
+import com.uniovi.entities.User;
+
+public interface PeticionRepository extends CrudRepository<Peticion, Long>{
+	
+	@Query("SELECT c.usuarioPeticionado FROM Peticion c WHERE c.usuarioPeticionador = ?1 ORDER BY c.usuarioPeticionado ASC")
+	List<Long> searchUsuariosPeticionados(long l);
+	
+	@Query("SELECT c.usuarioPeticionador FROM Peticion c WHERE c.usuarioPeticionado = ?1")
+	List<Long> searchUsuariosPeticionadores(long l);
+
+	Page<User> getUsersPeti(List<Long> peticionList, Pageable pageable);
+	
+}

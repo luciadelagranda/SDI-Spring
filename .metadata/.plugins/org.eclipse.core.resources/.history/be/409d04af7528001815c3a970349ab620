@@ -1,0 +1,13 @@
+package com.uniovi.entities;
+
+
+
+public class Peticion {
+
+	@OneToOne
+	private User clienteRecomendado;
+	
+	@ManyToOne
+	private User clienteRecomendador;
+
+}

@@ -1,17 +1,22 @@
 package com.uniovi.controllers;
 
 import java.security.Principal;
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import com.uniovi.entities.*;
+import com.uniovi.services.PeticionService;
 import com.uniovi.services.SecurityService;
 import com.uniovi.services.UsersService;
 import com.uniovi.validators.SignUpFormValidator;
@@ -27,6 +32,9 @@ public class UsersController {
 
 	@Autowired
 	private SignUpFormValidator signUpFormValidator;
+	
+	@Autowired
+	private PeticionService peticionService;
 
 	@RequestMapping(value = "/signup", method = RequestMethod.GET)
 	public String signup(Model model) {
@@ -52,17 +60,39 @@ public class UsersController {
 
 	@RequestMapping("/user/list")
 	public String getListado(Model model, 
-			@RequestParam(value = "", required = false) String searchText, Pageable pageable) {
+			@RequestParam(value = "", required = false) String searchText, Pageable pageable, Principal principal) {
 		Page<User> users = new PageImpl<User>(new LinkedList<User>());
 		if (searchText != null && !searchText.isEmpty()) {
 			users = usersService.searchByEmailAndName(searchText, pageable);
 		} else {
 			users = usersService.getUsers(pageable);
 		}
-
+		String email = principal.getName();
+		User user = usersService.getUserByEmail(email);
+		
+		Page<Long> peticionList = peticionService.getUsersPeticionados(pageable, user.getId());
+		model.addAttribute("peticionsList", peticionList);
 		model.addAttribute("usersList", users.getContent());
 		model.addAttribute("page", users);
+		
 		return "user/list";
 	}
-
+	
+	@RequestMapping("/user/list/update")
+	public String updateList(Model model, Pageable pageable) { 
+		Page<User> users = usersService.getUsers(pageable);
+		model.addAttribute("usersList", users.getContent());
+		return "user/list :: tableUser";
+	}
+	
+	@RequestMapping(value = "/user/{id}/makePeticion", method = RequestMethod.GET)
+	public String makePeticion(Model model, @PathVariable Long id) {
+		User friend = usersService.getUser(id);
+		Authentication sesion = SecurityContextHolder.getContext().getAuthentication();
+		String email = sesion.getName();
+		User user = usersService.getUserByEmail(email);
+		peticionService.makePeticion(friend.getId(),user.getId());
+		
+		return "redirect:/user/list";
+	}
 }

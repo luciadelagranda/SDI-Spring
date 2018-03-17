@@ -326,27 +326,377 @@
 2018-03-16 10:08:08,077 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 22 resources
 2018-03-16 10:08:08,404 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-03-16 10:08:08,405 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
-2018-03-16 10:10:11,070 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
-2018-03-16 10:10:11,089 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 21 resources
-2018-03-16 10:10:11,126 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
-2018-03-16 10:10:11,126 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
-2018-03-16 10:10:14,265 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
-2018-03-16 10:10:14,276 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
-2018-03-16 10:10:14,292 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 21 resources
-2018-03-16 10:10:14,310 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
-2018-03-16 10:10:14,310 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
-2018-03-16 10:10:15,673 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
-2018-03-16 10:10:15,688 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
-2018-03-16 10:10:15,709 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 21 resources
-2018-03-16 10:10:15,876 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
-2018-03-16 10:10:15,876 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
-2018-03-16 10:10:17,004 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
-2018-03-16 10:10:17,013 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
-2018-03-16 10:10:17,031 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 21 resources
-2018-03-16 10:10:17,107 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
-2018-03-16 10:10:17,107 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
-2018-03-16 10:10:18,544 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
-2018-03-16 10:10:18,561 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
-2018-03-16 10:10:18,576 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 21 resources
-2018-03-16 10:10:18,660 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
-2018-03-16 10:10:18,661 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 15:58:54,894 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-03-16 16:00:23,411 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.uniovi:Notaneitor:0.0.1-SNAPSHOT @ C:\Users\Pablo\GitHub\BeluNco\BeluNco\pom.xml.
+2018-03-16 16:00:26,652 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /BeluNco/src/main/java
+2018-03-16 16:00:26,653 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /BeluNco/src/main/resources
+2018-03-16 16:00:26,669 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /BeluNco/src/main/resources
+2018-03-16 16:00:26,688 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /BeluNco/src/test/java
+2018-03-16 16:00:30,081 [Worker-8] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 13 sec
+2018-03-16 16:00:34,450 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:00:34,457 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 16:00:34,482 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 22 resources
+2018-03-16 16:00:34,674 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:00:34,674 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 16:10:38,879 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:10:38,883 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 16:10:38,889 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-16 16:10:38,893 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:10:38,902 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 16:20:29,179 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:20:29,180 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-16 16:20:29,181 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 16:20:29,196 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:20:29,202 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 16:22:24,562 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:22:24,562 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-16 16:22:24,589 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-16 16:22:24,607 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:22:24,627 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 16:22:33,460 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:22:33,468 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-16 16:22:33,473 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 16:22:33,485 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:22:33,485 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 16:22:47,052 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:22:47,053 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-16 16:22:47,054 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 16:22:47,062 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:22:47,062 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 16:22:55,549 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:22:55,550 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-16 16:22:55,551 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 16:22:55,572 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:22:55,572 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 16:49:28,086 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:49:28,086 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-16 16:49:28,093 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 16:49:28,110 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:49:28,119 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 16:49:50,754 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:49:50,780 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-16 16:49:50,792 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 16:49:50,809 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:49:50,810 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 16:50:42,882 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:50:42,912 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 16:50:42,932 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 16:50:42,945 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:50:42,953 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 16:52:30,436 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:52:30,443 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-16 16:52:30,451 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 16:52:30,464 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:52:30,464 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 16:54:47,577 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:54:47,584 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 16:54:47,605 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 16:54:47,625 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:54:47,632 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 16:56:14,340 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:56:14,361 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 16:56:14,384 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 16:56:14,400 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:56:14,400 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 16:57:11,840 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:57:11,851 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 16:57:11,868 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 16:57:11,880 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 16:57:11,880 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 17:03:58,072 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 17:03:58,072 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-16 17:03:58,073 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 17:03:58,086 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 17:03:58,087 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 18:56:38,671 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-03-16 19:08:34,162 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:08:34,169 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:08:34,199 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 19:08:34,580 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:08:34,580 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:11:36,869 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:11:36,900 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:11:36,922 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 19:11:36,937 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:11:36,938 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:12:55,490 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:12:55,501 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:12:55,518 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 19:12:55,529 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:12:55,530 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:13:52,507 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:13:52,519 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:13:52,537 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 19:13:52,549 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:13:52,556 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:14:03,327 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:14:03,349 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:14:03,366 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 19:14:03,379 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:14:03,379 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:14:09,872 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:14:09,880 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:14:09,896 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 19:14:09,909 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:14:09,916 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:14:52,468 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:14:52,483 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:14:52,500 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 19:14:52,513 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:14:52,513 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:16:33,653 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:16:33,656 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-16 19:16:33,657 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:16:33,670 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:16:33,679 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:18:35,243 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:18:35,271 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-16 19:18:35,281 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:18:35,299 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:18:35,299 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:19:15,248 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:19:15,249 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:19:15,263 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-16 19:19:15,274 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:19:15,282 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:20:50,473 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:20:50,480 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-16 19:20:50,488 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:20:50,500 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:20:50,501 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:23:04,409 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:23:04,410 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-16 19:23:04,411 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:23:04,429 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:23:04,429 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:23:30,656 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:23:30,657 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:23:30,678 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-16 19:23:30,694 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:23:30,694 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:24:05,843 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:24:05,844 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:24:05,860 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-16 19:24:05,872 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:24:05,880 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:27:22,191 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:27:22,211 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:27:22,234 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 19:27:22,253 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:27:22,253 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:27:39,383 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:27:39,394 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:27:39,409 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 19:27:39,422 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:27:39,428 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:44:06,832 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:44:06,841 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:44:06,858 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 19:44:06,873 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:44:06,873 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:46:28,185 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:46:28,191 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:46:28,210 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 19:46:28,227 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:46:28,238 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:47:10,043 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:47:10,058 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:47:10,076 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 19:47:10,088 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:47:10,089 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:48:13,186 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:48:13,195 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:48:13,207 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 19:48:13,215 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:48:13,215 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:48:21,984 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:48:21,993 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:48:22,004 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 19:48:22,017 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:48:22,018 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:48:32,688 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:48:32,699 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:48:32,722 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 19:48:32,736 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:48:32,744 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:51:13,565 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:51:13,580 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:51:13,602 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 19:51:13,618 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:51:13,618 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:51:22,970 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:51:22,978 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:51:22,990 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 19:51:23,001 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:51:23,007 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:52:27,584 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:52:27,598 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:52:27,615 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 19:52:27,627 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:52:27,628 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:52:35,224 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:52:35,233 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:52:35,251 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 19:52:35,262 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:52:35,267 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:54:17,706 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:54:17,721 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:54:17,735 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 19:54:17,746 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:54:17,746 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:56:07,454 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:56:07,454 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-16 19:56:07,455 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:56:07,461 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:56:07,461 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:56:16,070 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:56:16,071 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:56:16,074 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-16 19:56:16,082 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:56:16,082 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:57:49,512 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:57:49,519 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:57:49,532 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 19:57:49,545 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:57:49,550 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 19:58:27,011 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:58:27,019 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-16 19:58:27,029 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 19:58:27,045 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 19:58:27,046 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 20:02:51,371 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:02:51,382 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 20:02:51,394 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 20:02:51,407 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:02:51,415 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 20:03:05,369 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:03:05,380 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 20:03:05,403 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 20:03:05,418 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:03:05,418 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 20:03:51,440 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:03:51,446 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 20:03:51,460 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 20:03:51,476 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:03:51,482 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 20:06:04,995 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:06:05,025 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 20:06:05,050 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 20:06:05,064 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:06:05,064 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 20:10:07,886 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:10:07,893 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 20:10:07,903 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 20:10:07,912 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:10:07,912 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 20:27:29,315 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:27:29,322 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 20:27:29,335 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 20:27:29,353 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:27:29,354 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 20:27:38,193 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:27:38,201 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 20:27:38,216 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 20:27:38,228 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:27:38,234 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 20:28:12,351 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:28:12,365 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 20:28:12,384 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 20:28:12,396 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:28:12,396 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 20:28:27,733 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:28:27,741 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 20:28:27,750 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 20:28:27,758 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:28:27,763 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 20:29:05,800 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:29:05,813 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 20:29:05,827 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 20:29:05,839 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:29:05,839 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 20:30:43,884 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:30:43,893 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 20:30:43,913 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 20:30:43,927 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:30:43,935 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 20:31:08,234 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:31:08,246 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 20:31:08,260 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 20:31:08,273 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:31:08,273 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 20:31:36,986 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:31:37,000 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 20:31:37,022 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 20:31:37,032 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:31:37,032 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-16 20:32:34,494 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:32:34,503 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-16 20:32:34,515 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-16 20:32:34,531 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-16 20:32:34,532 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-17 10:19:20,253 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-03-17 10:21:32,825 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:21:32,850 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-17 10:21:32,890 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-17 10:21:33,484 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:21:33,484 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-17 10:28:48,512 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:28:48,540 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-17 10:28:48,556 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-17 10:28:48,567 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:28:48,568 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-17 10:42:18,972 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:42:18,983 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-17 10:42:18,999 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-17 10:42:19,011 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:42:19,012 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-17 10:42:39,428 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:42:39,438 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-17 10:42:39,454 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-17 10:42:39,464 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:42:39,470 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-17 10:42:51,808 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:42:51,829 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-17 10:42:51,851 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-17 10:42:51,868 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:42:51,869 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-17 10:43:06,717 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:43:06,723 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-17 10:43:06,740 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-17 10:43:06,751 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:43:06,758 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-17 10:43:23,504 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:43:23,520 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-17 10:43:23,538 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-17 10:43:23,553 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:43:23,554 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-17 10:43:53,050 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:43:53,057 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-17 10:43:53,067 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-17 10:43:53,075 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:43:53,081 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-17 10:44:08,489 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:44:08,525 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-17 10:44:08,566 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-17 10:44:08,588 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:44:08,588 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-17 10:49:48,320 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:49:48,328 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-17 10:49:48,346 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-17 10:49:48,357 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:49:48,362 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-17 10:51:09,578 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:51:09,597 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-17 10:51:09,619 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 23 resources
+2018-03-17 10:51:09,636 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:51:09,636 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-17 10:56:57,797 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:56:57,800 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-17 10:56:57,801 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-17 10:56:57,810 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:56:57,811 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
+2018-03-17 10:57:38,792 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:57:38,793 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-17 10:57:38,794 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-17 10:57:38,813 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-17 10:57:38,813 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Pablo\GitHub\BeluNco\BeluNco\src\test\resources
