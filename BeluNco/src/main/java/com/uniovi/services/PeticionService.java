@@ -36,5 +36,19 @@ public class PeticionService {
 	public Page<User> getUsuariosPeticionadores(Pageable pageable, User user){
 		return peticionRepository.searchUsuariosPeticionadores(pageable, user.getId());
 	}
+
+
+	public boolean isPeticion(User friend, User user) {
+		Peticion peti = peticionRepository.existsPeticion(friend.getId(), user.getId());
+		if(peti!=null)
+			return true;
+		return false;
+	}
+
+
+	public void removePeticion(User friend, User user) {
+		peticionRepository.delete(peticionRepository.existsPeticion(friend.getId(), user.getId()).getId());
+		
+	}
 	
 }

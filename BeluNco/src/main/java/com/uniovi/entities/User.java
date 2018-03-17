@@ -2,11 +2,13 @@ package com.uniovi.entities;
 
 
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.Set;
 
 import javax.persistence.*;
 
-
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 
 
 @Entity
@@ -33,9 +35,9 @@ public class User {
     @OneToMany(mappedBy="usuarioPeticionado", cascade=CascadeType.ALL)
     private Set<Peticion> peticionesRecibidas = new HashSet<Peticion>();
     
-//    @ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
-//    @JoinTable(name="friends", joinColumns = @JoinColumn( name = "FRIEND_ID"), inverseJoinColumns = @JoinColumn(name = "USER_ID"))
-//    private Set<User> friends = new HashSet<User>();
+    @ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(name="friends", joinColumns = @JoinColumn( name = "FRIEND_ID"), inverseJoinColumns = @JoinColumn(name = "USER_ID"))
+    private Set<User> friends = new HashSet<User>();
     
     
 	public User(String email, String name, String lastName) {
@@ -112,6 +114,57 @@ public class User {
 
 	public void setPeticionado(boolean peticionado) {
 		this.peticionado = peticionado;
+	}
+
+
+	public Set<Peticion> getPeticionesEnviadas() {
+		return peticionesEnviadas;
+	}
+
+
+
+	public void setPeticionesEnviadas(Set<Peticion> peticionesEnviadas) {
+		this.peticionesEnviadas = peticionesEnviadas;
+	}
+
+
+
+	public Set<Peticion> getPeticionesRecibidas() {
+		return peticionesRecibidas;
+	}
+
+
+
+	public void setPeticionesRecibidas(Set<Peticion> peticionesRecibidas) {
+		this.peticionesRecibidas = peticionesRecibidas;
+	}
+
+
+	public void addFriend(User friend) {
+		friends.add(friend);
+		friend.getFriends().add(this);
+		
+	}
+
+
+
+	public Set<User> getFriends() {
+		return friends;
+	}
+
+
+
+	public void setFriends(Set<User> friends) {
+		this.friends = friends;
+	}
+
+
+
+	public Page<User> getFriendsList() {
+		LinkedList<User> userFriends = new LinkedList<User>();
+		for(User friend : friends)
+			userFriends.add(friend);
+		return new PageImpl<User>(userFriends);
 	}
 	
 

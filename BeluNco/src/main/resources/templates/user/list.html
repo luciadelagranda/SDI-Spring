@@ -34,34 +34,48 @@
 				<tbody>
 					<tr th:each="user : ${usersList}" th:object="${user}"
 					    th:if="${user.email} != ${#authentication.getPrincipal().getUsername()}"  >
+					    
 						<td th:text="${user.email}">71888888X</td>
 						<td th:text="${user.name}">Nombre del alumno</td>
 						<td th:text="${user.lastName}">Apellidos del alumno</td>
-						
-						<td th:if="${#bools.isFalse(#lists.contains(peticionsList, user))}">
-						<button type=" button" th:id="${'peticionButton' + user.id}" class="btn btn-if">AÑADIR AMIGO
-								</button> 
+						<td th:if="${#bools.isFalse(#lists.contains(friendsList,user))}">
+							<div th:if="${#bools.isFalse(#lists.contains(peticionsList, user))}">
+								<button type=" button" th:id="${'peticionButton' + user.id}" class="btn btn-if">AÑADIR AMIGO
+										</button> 
+										<script th:inline="javascript">
+											/*<![CDATA[*/
+											$("#peticionButton[[${user.id}]]")
+													.click(function() { 
+														$.get( "/user/[[${user.id}]]/makePeticion",function(data) {
+															 var numberPage = [[${param.page}]];
+															 var urlUpdate = '/user/list/update';
+															 if ( numberPage != null ){
+															 urlUpdate += "?page="+numberPage[0];
+															 }
+															$("#tableUser").load(urlUpdate);
+															
+															
+														});
+														$("#peticionButton[[${user.id}]]").removeClass("btn btn-if");
+														$("#peticionButton[[${user.id}]]").addClass("btn btn-warning");
+														$("#peticionButton[[${user.id}]]").text("PETICIÓN ENVIADA");
+														$("#peticionButton[[${user.id}]]").attr('disabled', true);
+													});
+											/*]]>*/
+										</script>
+							</div>
+							<div th:unless="${#bools.isFalse(#lists.contains(peticionsList, user))}">
+								<button type=" button" th:id="${'peticionButton' + user.id}" class="btn btn-warning">PETICIÓN ENVIADA
+									</button>
 								<script th:inline="javascript">
-									/*<![CDATA[*/
-									$("#peticionButton[[${user.id}]]")
-											.click(function() { 
-												$.get( "/user/[[${user.id}]]/makePeticion",function(data) {
-													 var numberPage = [[${param.page}]];
-													 var urlUpdate = '/user/list/update';
-													 if ( numberPage != null ){
-													 urlUpdate += "?page="+numberPage[0];
-													 }
-													$("#tableUser").load(urlUpdate);
-													
-													
-												});
-												$("#peticionButton[[${user.id}]]").attr('disabled', true);
-											});
-									/*]]>*/
+										/*<![CDATA[*/
+										$("#peticionButton[[${user.id}]]").attr('disabled', true);
+										/*]]>*/
 								</script>
+							</div>
 						</td>
-						<td th:unless="${#bools.isFalse(#lists.contains(peticionsList, user))}">
-							<button type=" button" th:id="${'peticionButton' + user.id}" class="btn btn-warning">PETICIÓN ENVIADA
+						<td th:unless="${#bools.isFalse(#lists.contains(friendsList,user))}">
+							<button type=" button" th:id="${'peticionButton' + user.id}" class="btn btn-success">YA SOIS AMIGOS
 								</button>
 							<script th:inline="javascript">
 									/*<![CDATA[*/
@@ -70,6 +84,14 @@
 							</script>
 						</td>
 						
+						
+						
+					</tr>
+					<tr th:each="user : ${usersList}" th:object="${user}"
+					    th:unless="${user.email} != ${#authentication.getPrincipal().getUsername()}"  >
+						<td th:text="${user.email}">71888888X</td>
+						<td th:text="${user.name}">Nombre del usuario</td>
+						<td th:text="${user.lastName}">Apellidos del usuario</td>
 					</tr>
 				</tbody>
 			</table>

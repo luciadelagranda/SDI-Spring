@@ -24,5 +24,8 @@ public interface PeticionRepository extends CrudRepository<Peticion, Long>{
 	@Query("SELECT c.usuarioPeticionador FROM Peticion c WHERE c.usuarioPeticionado.id = ?1")
 	Page<User> searchUsuariosPeticionadores(Pageable pageable, Long l);
 
+	@Query("SELECT c FROM Peticion c WHERE c.usuarioPeticionado.id = ?1 and c.usuarioPeticionador.id = ?2 ")
+	Peticion existsPeticion(long friend, long user);
+
 	
 }
