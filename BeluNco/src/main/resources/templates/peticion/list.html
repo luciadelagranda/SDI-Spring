@@ -5,8 +5,8 @@
 
 	<header th:replace="fragments/nav" />
 	<div class="container">
-		<h2>Lista de peticiones recibidas</h2>
-		<p>Los usuarios que actualmente figuran en el sistema son los siguientes:</p>
+		<h2 th:text="#{list.peticion}">Lista de peticiones recibidas</h2>
+		<p th:text="#{list.petmessage}">Los usuarios que actualmente figuran en el sistema son los siguientes:</p>
 
 
 		<div class="table-responsive">
@@ -23,7 +23,7 @@
 						th:if= "${#bools.isFalse(#lists.contains(friendsList,user))}"/>
 						<td th:text="${user.email}">defaultEmail</td>
 						<td>
-						<button type=" button" th:id="${'solicitudButton' + user.id}" class="btn btn-if">ACEPTAR SOLICITUD
+						<button type=" button" th:id="${'solicitudButton' + user.id}" class="btn btn-if" th:text="#{list.aceptar}">ACEPTAR SOLICITUD
 								</button> 
 								<script th:inline="javascript">
 									/*<![CDATA[*/

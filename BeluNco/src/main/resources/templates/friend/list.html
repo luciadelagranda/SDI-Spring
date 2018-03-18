@@ -5,8 +5,8 @@
 
 	<header th:replace="fragments/nav" />
 	<div class="container">
-		<h2>Lista de amigos</h2>
-		<p>Los usuarios que actualmente figuran como tus amigos son los siguientes:</p>
+		<h2 th:text="#{list.friends}">Lista de amigos</h2>
+		<p th:text="#{list.message}">Los usuarios que actualmente figuran como tus amigos son los siguientes:</p>
 
 
 		<div class="table-responsive">
@@ -14,7 +14,7 @@
 				<thead>
 					<tr>
 						<th>EMAIL</th>
-						<th>Nombre</th>
+						<th th:text="#{list.name}">Nombre</th>
 						<th class="col-md-1"></th>
 						<th class="col-md-1"></th>
 					</tr>
@@ -22,7 +22,7 @@
 				<tbody>
 					<tr th:each="user : ${friendsList}" />
 						<td th:text="${user.email}">defaultEmail</td>
-						<td th:text="${user.name}">defaultEmail</td>
+						<td th:text="${user.name}">defaultName</td>
 					</tr>
 				</tbody>
 			</table>
