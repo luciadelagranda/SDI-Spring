@@ -23,12 +23,14 @@ public class InsertSampleDataService {
 		user2.setPassword("1");
 		User user3 = new User("3", "María", "Rodríguez");
 		user3.setPassword("1");
+		User user4 = new User("4", "María", "Rodríguez");
+		user3.setPassword("1");
 		
 
 		usersService.saveUser(user1);
 		usersService.saveUser(user2);
 		usersService.saveUser(user3);
-
+		usersService.saveUser(user4);
 	}
 
 }
