@@ -24,7 +24,7 @@ public class InsertSampleDataService {
 		User user3 = new User("3", "María", "Rodríguez");
 		user3.setPassword("1");
 		User user4 = new User("4", "María", "Rodríguez");
-		user3.setPassword("1");
+		user4.setPassword("1");
 		
 
 		usersService.saveUser(user1);
