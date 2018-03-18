@@ -12,11 +12,30 @@
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav" sec:authorize="isAuthenticated()">
 					<li><a href="/user/list" th:text="#{list.seeUsers}">Ver Usuarios</a></li>
-					<li><a href="/peticion/list">Ver peticiones</a></li>
-					<li><a href="/friend/list">Ver amigos</a></li>
+					<li><a href="/peticion/list" th:text="#{list.seePets}">Ver peticiones</a></li>
+					<li><a href="/friend/list" th:text="#{list.seeFriends}">Ver amigos</a></li>
 				
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
+			
+			     <li class="dropdown">
+					 <a id="btnLanguage" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+					 	<span th:text="#{language.change}"></span> <span class="caret"></span>
+					 </a>
+					 <ul id="languageDropdownMenuButton" class="dropdown-menu">
+					 <li>
+						 <a id="btnEnglish" value="EN"> <img th:src="@{/img/if_uk_flag.png}" style="border: 0; float: left; margin-right: 15px" /> 
+						 <span th:text="#{language.en}">Inglés</span>
+						 </a>
+					 </li>
+					 <li>
+						 <a id="btnSpanish" value="ES"> <img th:src="@{/img/if_spain_flag.png}" style="border: 0; float: left; margin-right: 15px" /> 
+						 <span th:text="#{language.es}">Español</span>
+						 </a>
+					 </li>
+					 </ul>
+				 </li>
+			
 				<li sec:authorize="!isAuthenticated()"><a href="/signup"
 					th:text="#{signup.message}"> <span
 						class="glyphicon glyphicon-user"></span> Registrate
