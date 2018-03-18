@@ -1,7 +1,6 @@
 package com.uniovi.controllers;
 
 import java.security.Principal;
-
 import java.util.LinkedList;
 
 import org.springframework.beans.factory.annotation.*;
@@ -107,7 +106,7 @@ public class UsersController {
 		//El ususario en sesion es el que acepta, "el amigo", por eso los parametros estan al reves
 		if(peticionService.isPeticion(user,friend)) {
 			user.addFriend(friend);
-			usersService.saveUser(user);
+			usersService.saveUserWithoutEncode(user);
 			peticionService.removePeticion(user,friend);
 		}
 		

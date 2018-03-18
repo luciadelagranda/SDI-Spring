@@ -37,6 +37,10 @@ public class UsersService {
 		usersRepository.save(user);
 	}
 
+	public void saveUserWithoutEncode(User user) {
+		usersRepository.save(user);
+	}
+	
 	public User getUserByEmail(String email) {
 		return usersRepository.findByEmail(email);
 	}

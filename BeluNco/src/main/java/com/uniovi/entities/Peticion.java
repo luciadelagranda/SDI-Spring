@@ -8,7 +8,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Peticion {
 
-    @Id
+	@Id
     @GeneratedValue
     private Long id;
     
