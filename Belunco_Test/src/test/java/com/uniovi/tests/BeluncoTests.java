@@ -37,7 +37,7 @@ public class BeluncoTests {
 		return driver;
 	}
 
-	public String creaPass() {
+	private String creaPass() {
 		for (int i = 0; i < 8; i++) {
 			int el = (int) (Math.random() * 6);
 			conjunto.add(elementos[el]);
@@ -191,8 +191,7 @@ public class BeluncoTests {
 		busqueda.sendKeys("belu");
 		elementos = SeleniumUtils.EsperaCargaPagina(driver, "class", "btn-default", 2);
 		elementos.get(0).click();
-		elementos = SeleniumUtils.EsperaCargaPagina(driver, "text", "AÑADIR AMIGO", 2);
-		elementos.get(0).click();
+		elementos = SeleniumUtils.EsperaCargaPagina(driver, "text", "PETICIÓN ENVIADA", 2);
 		assertFalse(elementos.get(0).isEnabled());
 		PO_PrivateView.clickOption(driver, "logout", "text", "Identifícate");
 	}
@@ -245,7 +244,7 @@ public class BeluncoTests {
 	@Test // PASA
 	public void MListAmiVal() {
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
-		PO_LoginView.fillForm(driver, "2", "1");
+		PO_LoginView.fillForm(driver, "1", "1");
 		PO_HomeView.clickOption(driver, "friend/list", "text", "Ver amigos");
 		PO_View.checkElement(driver, "text",
 				"Los usuarios que actualmente figuran como tus amigos son los siguientes:");
