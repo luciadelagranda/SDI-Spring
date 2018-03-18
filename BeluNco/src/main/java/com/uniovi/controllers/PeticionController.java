@@ -1,8 +1,6 @@
 package com.uniovi.controllers;
 
 import java.security.Principal;
-
-
 import java.util.LinkedList;
 
 import org.springframework.beans.factory.annotation.Autowired;

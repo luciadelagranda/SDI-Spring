@@ -2,8 +2,6 @@ package com.uniovi.services;
 
 
 
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -29,6 +27,7 @@ public class PeticionService {
 	}
 	
 
+
 	public Page<User> getUsersPeticionados(Pageable pageable, Long l) {
 		return peticionRepository.searchUsuariosPeticionados(pageable, l);
 	}
@@ -43,6 +42,7 @@ public class PeticionService {
 		if(peti!=null)
 			return true;
 		return false;
+
 	}
 
 
