@@ -59,7 +59,7 @@ public class PublicationController {
 	 * @return
 	 */
 	@RequestMapping(value = "/publication/add", method = RequestMethod.POST)
-	public String signup(Model model, Publication publication, Principal principal) {
+	public String addPublication(Model model, Publication publication, Principal principal) {
 		String title = publication.getTitle();
 		String des = publication.getDescripcion();
 		String email = principal.getName();
@@ -78,7 +78,7 @@ public class PublicationController {
 	 * @return
 	 */
 	@RequestMapping("/publication/list")
-	public String getListadoPeticiones(Model model, Principal principal, Pageable pageable) {
+	public String getListadoPublication(Model model, Principal principal, Pageable pageable) {
 		Page<Publication> lista = new PageImpl<Publication>(new LinkedList<Publication>());
 		String email = principal.getName();
 		User user = usersService.getUserByEmail(email);
@@ -107,7 +107,7 @@ public class PublicationController {
 	}
 	
 	@RequestMapping("/publication/list/{id}")
-	public String getListadoPeticiones(Model model, Principal principal, Pageable pageable, 
+	public String getListadoPublicacionesFriend(Model model, Principal principal, Pageable pageable, 
 			@PathVariable Long id) {
 		Page<Publication> lista = new PageImpl<Publication>(new LinkedList<Publication>());
 		User friend = usersService.getUser(id);
