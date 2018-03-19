@@ -61,6 +61,11 @@ public class UsersService {
 		return usersRepository.findOne(id);
 	}
 
+	public void deleteUser(Long id) {
+		usersRepository.delete(id);
+		
+	}
+
 
 
 

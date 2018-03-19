@@ -2,8 +2,6 @@ package com.uniovi.tests;
 
 import static org.junit.Assert.*;
 
-
-
 import java.util.List;
 
 import org.junit.*;
@@ -14,6 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import com.uniovi.tests.pageobjects.PO_HomeView;
 import com.uniovi.tests.pageobjects.PO_LoginView;
 import com.uniovi.tests.pageobjects.PO_PrivateView;
+import com.uniovi.tests.pageobjects.PO_PublicationView;
 import com.uniovi.tests.pageobjects.PO_RegisterView;
 import com.uniovi.tests.pageobjects.PO_View;
 import com.uniovi.tests.utils.SeleniumUtils;
@@ -22,16 +21,15 @@ import com.uniovi.tests.utils.SeleniumUtils;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class BeluncoTests {
 
-	static String PathFirefox = "E:\\RepoGit\\BeluNco\\Firefox46.win\\FirefoxPortable.exe";
+	static String PathFirefox = "F:\\RepoGit\\BeluNco\\Firefox46.win\\FirefoxPortable.exe";
 	static WebDriver driver = getDriver(PathFirefox);
 	static String URL = "http://localhost:8090";
-	
+
 	public static WebDriver getDriver(String PathFirefox) {
 		System.setProperty("webdriver.firefox.bin", PathFirefox);
 		WebDriver driver = new FirefoxDriver();
 		return driver;
 	}
-
 
 	@Before
 	public void setUp() {
@@ -151,7 +149,7 @@ public class BeluncoTests {
 		elementos = SeleniumUtils.EsperaCargaPagina(driver, "text", "AÑADIR AMIGO", 2);
 		elementos.get(0).click();
 		PO_PrivateView.clickOption(driver, "logout", "text", "Identifícate");
-		
+
 	}
 
 	@Test // PASA
@@ -229,4 +227,25 @@ public class BeluncoTests {
 		assertTrue(elementos2.size() >= 1);
 		PO_PrivateView.clickOption(driver, "logout", "text", "Identifícate");
 	}
+
+	@Test
+	public void NPubVal() {
+		// Vamos al formulario de logueo.
+		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
+		// Rellenamos el formulario
+		PO_LoginView.fillForm(driver, "1", "1");
+		PO_View.checkElement(driver, "text", "Ver Usuarios");
+		//Accedemos a publicaciones
+		List<WebElement> elementos = PO_View.checkElement(driver, "free", "//li[contains(@id, 'publication-menu')]/a");
+		elementos.get(0).click();
+		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href,'/publication/add')]");
+		elementos.get(0).click();
+		//Rellenamos el formulario
+		SeleniumUtils.EsperaCargaPagina(driver,"class", "control-label col-sm-2" , 5);
+		PO_PublicationView.fillForm(driver, "Moda españa", "Dulceida como pionera.");
+		//Desconectamos
+		PO_PrivateView.clickOption(driver, "logout", "text", "Identifícate");
+	}
+	
+	
 }

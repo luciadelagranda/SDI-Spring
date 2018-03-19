@@ -17,16 +17,23 @@
 						peticiones</a></li>
 				<li><a href="/friend/list" th:text="#{list.seeFriends}">Ver
 						amigos</a></li>
-				<li class="dropdown"><a id="btnLanguage" href="#"
+						
+				<li id="publication-menu" class="dropdown">
+					<a href="#"
 					class="dropdown-toggle" data-toggle="dropdown" role="button"
-					aria-haspopup="true" aria-expanded="false"> <span
+					aria-haspopup="true" aria-expanded="false"> 
+					<span
 						th:text="Publicaciones"></span> <span class="caret"></span>
 				</a>
 					<ul id="publicacionesMenuButton" class="dropdown-menu">
 						<li><a href="/publication/add">Añadir publicacion</a></li>
 						<li><a href="/publication/list">Lista publicaciones</a></li>
-					</ul></li>
-
+					</ul>
+					</li>
+					
+					<li sec:authorize="hasRole('ROLE_ADMIN')"><a
+					href="/admin/list">Usuarios</a></li>
+			
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 

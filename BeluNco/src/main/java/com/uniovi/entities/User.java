@@ -2,6 +2,7 @@ package com.uniovi.entities;
 
 
 import java.util.HashSet;
+
 import java.util.LinkedList;
 import java.util.Set;
 
@@ -21,8 +22,9 @@ public class User {
 	private String email;
 	private String name;
 	private String lastName;
+	private String role;
 	
-	private Boolean peticionado= false;
+	
 	
     private String password;
     @Transient //Specifies that the property or field is not persistent. 
@@ -35,7 +37,7 @@ public class User {
     @OneToMany(mappedBy="usuarioPeticionado", cascade=CascadeType.ALL)
     private Set<Peticion> peticionesRecibidas = new HashSet<Peticion>();
     
-    @ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToMany
     @JoinTable(name="friends", joinColumns = @JoinColumn( name = "FRIEND_ID"), inverseJoinColumns = @JoinColumn(name = "USER_ID"))
     private Set<User> friends = new HashSet<User>();
     
@@ -108,17 +110,6 @@ public class User {
 	}
 
 
-	public boolean isPeticionado() {
-		return peticionado;
-	}
-
-
-
-	public void setPeticionado(boolean peticionado) {
-		this.peticionado = peticionado;
-	}
-
-
 	public Set<Peticion> getPeticionesEnviadas() {
 		return peticionesEnviadas;
 	}
@@ -173,6 +164,26 @@ public class User {
 
 	public boolean isFriend(User friend) {
 		return friends.contains(friend);
+	}
+
+
+
+	public String getRole() {
+		return role;
+	}
+
+
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+
+
+	public void unlink(User user) {
+		for(User friend : friends)
+			friend.getFriends().remove(user);
+		friends = new HashSet<User>();
 	}
 
 
