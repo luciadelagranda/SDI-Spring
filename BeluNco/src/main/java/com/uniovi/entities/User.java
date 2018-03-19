@@ -170,4 +170,10 @@ public class User {
 	}
 
 
+
+	public boolean isFriend(User friend) {
+		return friends.contains(friend);
+	}
+
+
 }

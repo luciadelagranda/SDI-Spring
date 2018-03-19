@@ -3,7 +3,7 @@ package com.uniovi.tests;
 import static org.junit.Assert.*;
 
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 import org.junit.*;
@@ -25,11 +25,6 @@ public class BeluncoTests {
 	static String PathFirefox = "E:\\RepoGit\\BeluNco\\Firefox46.win\\FirefoxPortable.exe";
 	static WebDriver driver = getDriver(PathFirefox);
 	static String URL = "http://localhost:8090";
-
-	String[] elementos = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h",
-			"i", "j", "k", "l", "m", "n ", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
-	ArrayList<String> conjunto = new ArrayList<String>();
-	String pass;
 	
 	public static WebDriver getDriver(String PathFirefox) {
 		System.setProperty("webdriver.firefox.bin", PathFirefox);
@@ -37,14 +32,6 @@ public class BeluncoTests {
 		return driver;
 	}
 
-	private String creaPass() {
-		for (int i = 0; i < 8; i++) {
-			int el = (int) (Math.random() * 6);
-			conjunto.add(elementos[el]);
-		}
-		this.pass =  conjunto.toString();
-		return pass;
-	}
 
 	@Before
 	public void setUp() {
@@ -68,7 +55,7 @@ public class BeluncoTests {
 	@Test // PASA
 	public void ARegVal() {
 		PO_HomeView.clickOption(driver, "signup", "class", "btn btn-primary");
-		PO_RegisterView.fillForm(driver, creaPass(), "belunco", "belunco", "belunco", "belunco");
+		PO_RegisterView.fillForm(driver, SeleniumUtils.creaPass(), "belunco", "belunco", "belunco", "belunco");
 		PO_View.checkElement(driver, "text", "Ver Usuarios");
 	}
 
@@ -150,17 +137,6 @@ public class BeluncoTests {
 
 	@Test // PASA
 	public void IInvVal() {
-//		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
-//		PO_LoginView.fillForm(driver, "1", "1");
-//		PO_View.checkElement(driver, "text", "Ver Usuarios");
-//		PO_View.checkElement(driver, "text", "Los usuarios que actualmente figuran en el sistema son los siguientes:");
-//		List<WebElement> elementos = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
-//				PO_View.getTimeout());
-//		assertTrue(elementos.size() == 5);
-//		elementos = SeleniumUtils.EsperaCargaPagina(driver, "text", "AÑADIR AMIGO", 2);
-//		elementos.get(0).click();
-//		PO_PrivateView.clickOption(driver, "logout", "text", "Identifícate");
-		
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
 		PO_LoginView.fillForm(driver, "1", "1");
 		PO_View.checkElement(driver, "text", "Ver Usuarios");
@@ -199,7 +175,7 @@ public class BeluncoTests {
 	@Test // PASA
 	public void KLisInvVal() {
 		PO_HomeView.clickOption(driver, "signup", "class", "btn btn-primary");
-		PO_RegisterView.fillForm(driver, creaPass(), "belunco", "belunco", "belunco", "belunco");
+		PO_RegisterView.fillForm(driver, SeleniumUtils.creaPass(), "belunco", "belunco", "belunco", "belunco");
 		PO_View.checkElement(driver, "text", "Ver Usuarios");
 		PO_HomeView.clickOption(driver, "user/list", "text", "Ver Usuarios");
 		List<WebElement> elementos2 = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
