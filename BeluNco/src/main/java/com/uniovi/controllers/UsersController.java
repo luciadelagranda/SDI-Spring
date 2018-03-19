@@ -15,6 +15,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import com.uniovi.entities.*;
 import com.uniovi.services.PeticionService;
+import com.uniovi.services.RolesService;
 import com.uniovi.services.SecurityService;
 import com.uniovi.services.UsersService;
 import com.uniovi.validators.SignUpFormValidator;
@@ -45,6 +46,9 @@ public class UsersController {
 	 */
 	@Autowired
 	private PeticionService peticionService;
+	
+	@Autowired
+	private RolesService rolesService;
 
 	/**
 	 * 
@@ -74,6 +78,7 @@ public class UsersController {
 		if (result.hasErrors()) {
 			return "signup";
 		}
+		user.setRole(rolesService.getRoles()[0]);
 		usersService.saveUser(user);
 		securityService.autoLogin(user.getEmail(), user.getPasswordConfirm());
 		return "redirect:";
@@ -181,4 +186,6 @@ public class UsersController {
 		
 		return "redirect:/user/list";
 	}
+	
+	
 }
