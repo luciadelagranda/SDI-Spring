@@ -9,50 +9,46 @@ import javax.persistence.ManyToOne;
 public class Peticion {
 
 	@Id
-    @GeneratedValue
-    private Long id;
-    
-    @ManyToOne
-    private User usuarioPeticionado;
+	@GeneratedValue
+	private Long id;
 
-    @ManyToOne
-    private User usuarioPeticionador;
+	@ManyToOne
+	private User usuarioPeticionado;
 
-    public Peticion(User usuarioPeticionado, User usuarioPeticionador) {
-        super();
-        this.usuarioPeticionado = usuarioPeticionado;
-        this.usuarioPeticionador = usuarioPeticionador;
-    }
+	@ManyToOne
+	private User usuarioPeticionador;
 
-    Peticion() {
-    }
+	public Peticion(User usuarioPeticionado, User usuarioPeticionador) {
+		super();
+		this.usuarioPeticionado = usuarioPeticionado;
+		this.usuarioPeticionador = usuarioPeticionador;
+	}
 
-    public User getUsuarioPeticionado() {
-        return usuarioPeticionado;
-    }
+	Peticion() {
+	}
 
-    public void setUsuarioPeticionado(User usuarioPeticionado) {
-        this.usuarioPeticionado = usuarioPeticionado;
-    }
+	public User getUsuarioPeticionado() {
+		return usuarioPeticionado;
+	}
 
-    public User getUsuarioPeticionador() {
-        return usuarioPeticionador;
-    }
+	public void setUsuarioPeticionado(User usuarioPeticionado) {
+		this.usuarioPeticionado = usuarioPeticionado;
+	}
 
-    public void setUsuarioPeticionador(User usuarioPeticionador) {
-        this.usuarioPeticionador = usuarioPeticionador;
-    }
+	public User getUsuarioPeticionador() {
+		return usuarioPeticionador;
+	}
 
-    public Long getId() {
-        return id;
-    }
+	public void setUsuarioPeticionador(User usuarioPeticionador) {
+		this.usuarioPeticionador = usuarioPeticionador;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-
-
-
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 }

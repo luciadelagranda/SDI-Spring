@@ -1,6 +1,5 @@
 package com.uniovi.controllers;
 
-
 import java.security.Principal;
 
 
@@ -22,32 +21,62 @@ import com.uniovi.entities.User;
 import com.uniovi.services.PublicationService;
 import com.uniovi.services.UsersService;
 
-
 @Controller
 public class PublicationController {
-	
+
+	/**
+	 * Inyecta el servicio UsersService
+	 */
 	@Autowired
 	private UsersService usersService;
-	
+
+	/**
+	 * Inyecta el servicio PublicationService
+	 */
 	@Autowired
 	private PublicationService publicationService;
-	
+
+	/**
+	 * 
+	 * Añade una publicacion
+	 * 
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping(value = "/publication/add", method = RequestMethod.GET)
 	public String publication(Model model) {
-		model.addAttribute("publication", publicationService.getPublications(null,null));
+		model.addAttribute("publication", publicationService.getPublications(null, null));
 		return "publication/add";
 	}
-	
+
+	/**
+	 * 
+	 * 
+	 * 
+	 * @param model
+	 * @param publication
+	 * @param principal
+	 * @return
+	 */
 	@RequestMapping(value = "/publication/add", method = RequestMethod.POST)
 	public String signup(Model model, Publication publication, Principal principal) {
 		String title = publication.getTitle();
 		String des = publication.getDescripcion();
 		String email = principal.getName();
 		User user = usersService.getUserByEmail(email);
-		publicationService.addPublication(new Publication(user,title,des));
+		publicationService.addPublication(new Publication(user, title, des));
 		return "redirect:/publication/list";
 	}
-	
+
+	/**
+	 * 
+	 * 
+	 * 
+	 * @param model
+	 * @param principal
+	 * @param pageable
+	 * @return
+	 */
 	@RequestMapping("/publication/list")
 	public String getListadoPeticiones(Model model, Principal principal, Pageable pageable) {
 		Page<Publication> lista = new PageImpl<Publication>(new LinkedList<Publication>());
@@ -58,7 +87,16 @@ public class PublicationController {
 		model.addAttribute("page", lista);
 		return "publication/list";
 	}
-	
+
+	/**
+	 * 
+	 * 
+	 * 
+	 * @param model
+	 * @param pageable
+	 * @param principal
+	 * @return
+	 */
 	@RequestMapping("/publication/list/update")
 	public String updateList(Model model, Pageable pageable, Principal principal) {
 		String email = principal.getName();

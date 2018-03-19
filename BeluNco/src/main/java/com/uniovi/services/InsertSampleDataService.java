@@ -13,12 +13,18 @@ import com.uniovi.entities.User;
 @Service
 public class InsertSampleDataService {
 	
+	/**
+	 * Inyecta el servicio UsersService
+	 */
 	@Autowired
 	private UsersService usersService;
 	
 	@Autowired
 	private RolesService rolesService;
-	
+
+	/**
+	 * PostConstruct
+	 */
 	@PostConstruct
 	public void init() {
 		User user1 = new User("1", "Pedro", "Díaz");
