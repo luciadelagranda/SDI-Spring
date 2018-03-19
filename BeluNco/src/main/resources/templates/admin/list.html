@@ -19,6 +19,16 @@
 		<div class="table-responsive">
 			<table class="table table-hover">
 				<thead>
+					<tr>
+						<th>EMAIL</th>
+						<th>NOMBRE</th>
+						<th>APELLIDOS</th>
+						<th class="col-md-1"></th>
+						<th class="col-md-1"></th>
+						<th class="col-md-1"></th>
+					</tr>
+				</thead>
+				<tbody id="tabla_usuarios">
 					<tr th:each="user : ${usersList}" >
 						<td th:text="${user.email}">71888888X</td>
 						<td th:text="${user.name}">Nombre del usuario</td>
