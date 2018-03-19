@@ -2,13 +2,12 @@ package com.uniovi.tests;
 
 import static org.junit.Assert.*;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.*;
 import org.junit.runners.MethodSorters;
-import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.uniovi.tests.pageobjects.PO_HomeView;
 import com.uniovi.tests.pageobjects.PO_LoginView;
