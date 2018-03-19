@@ -2,6 +2,7 @@ package com.uniovi.tests;
 
 import static org.junit.Assert.*;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +14,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import com.uniovi.tests.pageobjects.PO_HomeView;
 import com.uniovi.tests.pageobjects.PO_LoginView;
 import com.uniovi.tests.pageobjects.PO_PrivateView;
-import com.uniovi.tests.pageobjects.PO_Properties;
 import com.uniovi.tests.pageobjects.PO_RegisterView;
 import com.uniovi.tests.pageobjects.PO_View;
 import com.uniovi.tests.utils.SeleniumUtils;
@@ -22,7 +22,7 @@ import com.uniovi.tests.utils.SeleniumUtils;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class BeluncoTests {
 
-	static String PathFirefox = "C:\\Users\\Pablo\\Desktop\\Firefox46.win\\FirefoxPortable.exe";
+	static String PathFirefox = "E:\\RepoGit\\BeluNco\\Firefox46.win\\FirefoxPortable.exe";
 	static WebDriver driver = getDriver(PathFirefox);
 	static String URL = "http://localhost:8090";
 
@@ -76,7 +76,7 @@ public class BeluncoTests {
 	public void BRegInval() {
 		PO_HomeView.clickOption(driver, "signup", "class", "btn btn-primary");
 		PO_RegisterView.fillForm(driver, "beluncotest2@uniovi.es", "belunco", "belunco", "belunco1", "belunco");
-		PO_RegisterView.checkKey(driver, "Error.signup.passwordConfirm.coincidence", PO_Properties.getSPANISH());
+		PO_View.checkElement(driver, "text", "Las contrasenas no coinciden");
 	}
 
 	@Test // PASA

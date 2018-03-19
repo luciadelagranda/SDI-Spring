@@ -39,6 +39,8 @@ public class User {
     @JoinTable(name="friends", joinColumns = @JoinColumn( name = "FRIEND_ID"), inverseJoinColumns = @JoinColumn(name = "USER_ID"))
     private Set<User> friends = new HashSet<User>();
     
+    @OneToMany(mappedBy="autor", cascade=CascadeType.ALL)
+    private Set<Publication> publicaciones = new HashSet<Publication>();
     
 	public User(String email, String name, String lastName) {
 		super();
