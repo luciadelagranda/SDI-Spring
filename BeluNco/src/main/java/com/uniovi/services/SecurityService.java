@@ -12,10 +12,19 @@ import org.springframework.stereotype.Service;;
 
 @Service
 public class SecurityService {
+
+	/**
+	 * Inyecta AuthenticationManager
+	 */
 	@Autowired
 	private AuthenticationManager authenticationManager;
+
+	/**
+	 * Inyecta UserDetailsService
+	 */
 	@Autowired
 	private UserDetailsService userDetailsService;
+
 	private static final Logger logger = LoggerFactory.getLogger(SecurityService.class);
 
 	public String findLoggedInEmail() {

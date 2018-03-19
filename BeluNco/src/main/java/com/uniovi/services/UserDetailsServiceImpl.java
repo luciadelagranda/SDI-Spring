@@ -13,6 +13,10 @@ import java.util.*;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
+
+	/**
+	 * Inyecta UsersRepository
+	 */
 	@Autowired
 	private UsersRepository usersRepository;
 
@@ -20,11 +24,11 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		User user = usersRepository.findByEmail(email);
 		if (user != null) {
-		Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
-		grantedAuthorities.add(new SimpleGrantedAuthority("ROLE_ESTUDIANTE"));
+			Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
+			grantedAuthorities.add(new SimpleGrantedAuthority("ROLE_ESTUDIANTE"));
 
-		return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(),
-				grantedAuthorities);
+			return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(),
+					grantedAuthorities);
 		}
 		throw new UsernameNotFoundException(email);
 	}
