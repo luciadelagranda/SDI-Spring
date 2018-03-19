@@ -21,7 +21,7 @@ import com.uniovi.tests.utils.SeleniumUtils;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class BeluncoTests {
 
-	static String PathFirefox = "F:\\RepoGit\\BeluNco\\Firefox46.win\\FirefoxPortable.exe";
+	static String PathFirefox = "Firefox46.win\\FirefoxPortable.exe";
 	static WebDriver driver = getDriver(PathFirefox);
 	static String URL = "http://localhost:8090";
 
