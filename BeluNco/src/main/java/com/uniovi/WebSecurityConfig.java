@@ -16,6 +16,14 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
+	
+	/**
+	 * Inyecta UserDetailsService
+	 */
+	@Autowired
+	private UserDetailsService userDetailsService;
+
+
 	@Configuration
 	@Order(1)
 	public class UserLoginConfiguration extends WebSecurityConfigurerAdapter {

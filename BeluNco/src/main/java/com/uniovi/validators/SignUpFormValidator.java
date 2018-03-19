@@ -10,6 +10,9 @@ import org.springframework.validation.*;
 @Component
 public class SignUpFormValidator implements Validator {
 
+	/**
+	 * Inyecta UsersService
+	 */
 	@Autowired
 	private UsersService usersService;
 
@@ -18,6 +21,9 @@ public class SignUpFormValidator implements Validator {
 		return User.class.equals(aClass);
 	}
 
+	/**
+	 * Validador del formulario
+	 */
 	@Override
 	public void validate(Object target, Errors errors) {
 		User user = (User) target;

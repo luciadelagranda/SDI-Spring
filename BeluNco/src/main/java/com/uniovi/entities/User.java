@@ -1,6 +1,5 @@
 package com.uniovi.entities;
 
-
 import java.util.HashSet;
 
 import java.util.LinkedList;
@@ -11,20 +10,18 @@ import javax.persistence.*;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 
-
 @Entity
 public class User {
 
 	@Id
 	@GeneratedValue
 	private Long id;
-	@Column(unique=true)
+	@Column(unique = true)
 	private String email;
 	private String name;
 	private String lastName;
-	private String role;
-	
-	
+
+	  private String role;
 	
     private String password;
     @Transient //Specifies that the property or field is not persistent. 
@@ -50,25 +47,22 @@ public class User {
 		this.name = name;
 		this.lastName = lastName;
 	}
-	
-	
 
-    public String getPassword() {
-        return password;
-    }
+	public String getPassword() {
+		return password;
+	}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-    public String getPasswordConfirm() {
-        return passwordConfirm;
-    }
+	public String getPasswordConfirm() {
+		return passwordConfirm;
+	}
 
-    public void setPasswordConfirm(String passwordConfirm) {
-        this.passwordConfirm = passwordConfirm;
-    }
-
+	public void setPasswordConfirm(String passwordConfirm) {
+		this.passwordConfirm = passwordConfirm;
+	}
 
 	public User() {
 	}
@@ -104,63 +98,47 @@ public class User {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	
+
 	public String getFullName() {
 		return this.name + " " + this.lastName;
 	}
-
 
 	public Set<Peticion> getPeticionesEnviadas() {
 		return peticionesEnviadas;
 	}
 
-
-
 	public void setPeticionesEnviadas(Set<Peticion> peticionesEnviadas) {
 		this.peticionesEnviadas = peticionesEnviadas;
 	}
-
-
 
 	public Set<Peticion> getPeticionesRecibidas() {
 		return peticionesRecibidas;
 	}
 
-
-
 	public void setPeticionesRecibidas(Set<Peticion> peticionesRecibidas) {
 		this.peticionesRecibidas = peticionesRecibidas;
 	}
 
-
 	public void addFriend(User friend) {
 		friends.add(friend);
 		friend.getFriends().add(this);
-		
+
 	}
-
-
 
 	public Set<User> getFriends() {
 		return friends;
 	}
 
-
-
 	public void setFriends(Set<User> friends) {
 		this.friends = friends;
 	}
 
-
-
 	public Page<User> getFriendsList() {
 		LinkedList<User> userFriends = new LinkedList<User>();
-		for(User friend : friends)
+		for (User friend : friends)
 			userFriends.add(friend);
 		return new PageImpl<User>(userFriends);
 	}
-
-
 
 	public boolean isFriend(User friend) {
 		return friends.contains(friend);
@@ -185,6 +163,7 @@ public class User {
 			friend.getFriends().remove(user);
 		friends = new HashSet<User>();
 	}
+
 
 
 }
