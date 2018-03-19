@@ -23,16 +23,16 @@
 					class="dropdown-toggle" data-toggle="dropdown" role="button"
 					aria-haspopup="true" aria-expanded="false"> 
 					<span
-						th:text="Publicaciones"></span> <span class="caret"></span>
+						th:text="#{nav.pubs}"></span> <span class="caret"></span>
 				</a>
 					<ul id="publicacionesMenuButton" class="dropdown-menu">
-						<li><a href="/publication/add">Añadir publicacion</a></li>
-						<li><a href="/publication/list">Lista publicaciones</a></li>
+						<li><a href="/publication/add" th:text="#{nav.add}">Añadir publicacion</a></li>
+						<li><a href="/publication/list" th:text="#{nav.list}">Lista publicaciones</a></li>
 					</ul>
 					</li>
 					
 					<li sec:authorize="hasRole('ROLE_ADMIN')"><a
-					href="/admin/list">Usuarios</a></li>
+					href="/admin/list" th:text="#{list.users}">Usuarios</a></li>
 			
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
