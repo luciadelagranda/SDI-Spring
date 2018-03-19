@@ -50,28 +50,28 @@ public class BeluncoTests {
 		driver.quit();
 	}
 
-	@Test // PASA
+	@Test
 	public void ARegVal() {
 		PO_HomeView.clickOption(driver, "signup", "class", "btn btn-primary");
 		PO_RegisterView.fillForm(driver, SeleniumUtils.creaPass(), "belunco", "belunco", "belunco", "belunco");
 		PO_View.checkElement(driver, "text", "Ver Usuarios");
 	}
 
-	@Test // PASA
+	@Test 
 	public void BRegInval() {
 		PO_HomeView.clickOption(driver, "signup", "class", "btn btn-primary");
 		PO_RegisterView.fillForm(driver, "beluncotest2@uniovi.es", "belunco", "belunco", "belunco1", "belunco");
 		PO_View.checkElement(driver, "text", "Las contrasenas no coinciden");
 	}
 
-	@Test // PASA
+	@Test 
 	public void CInVal() {
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
 		PO_LoginView.fillForm(driver, "1", "1");
 		PO_View.checkElement(driver, "text", "Ver Usuarios");
 	}
 
-	@Test // PASA
+	@Test 
 	public void DInInVal() {
 		// Vamos al formulario de logueo.
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
@@ -81,7 +81,7 @@ public class BeluncoTests {
 		PO_View.checkElement(driver, "text", "El usuario ó la contraseña son incorrectos.");
 	}
 
-	@Test // PASA
+	@Test 
 	public void ELisUsrVal() {
 		// Vamos al formulario de logueo.
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
@@ -104,13 +104,13 @@ public class BeluncoTests {
 		PO_PrivateView.clickOption(driver, "logout", "text", "Identifícate");
 	}
 
-	@Test // PASA
+	@Test 
 	public void FLisUsrInVal() {
 		driver.navigate().to("http://localhost:8090/user/list");
 		PO_View.checkElement(driver, "text", "Identifícate");
 	}
 
-	@Test // PASA
+	@Test 
 	public void GBusUsrVal() {
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
 		PO_LoginView.fillForm(driver, "1", "1");
@@ -127,13 +127,13 @@ public class BeluncoTests {
 		PO_PrivateView.clickOption(driver, "logout", "text", "Identifícate");
 	}
 
-	@Test // PASA
+	@Test 
 	public void HBusUsrInVal() {
 		driver.navigate().to("http://localhost:8090/user/list?searchText=belu");
 		PO_View.checkElement(driver, "text", "Identifícate");
 	}
 
-	@Test // PASA
+	@Test
 	public void IInvVal() {
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
 		PO_LoginView.fillForm(driver, "1", "1");
@@ -152,7 +152,7 @@ public class BeluncoTests {
 
 	}
 
-	@Test // PASA
+	@Test 
 	public void JInvInVal() {
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
 		PO_LoginView.fillForm(driver, "1", "1");
@@ -170,7 +170,7 @@ public class BeluncoTests {
 		PO_PrivateView.clickOption(driver, "logout", "text", "Identifícate");
 	}
 
-	@Test // PASA
+	@Test 
 	public void KLisInvVal() {
 		PO_HomeView.clickOption(driver, "signup", "class", "btn btn-primary");
 		PO_RegisterView.fillForm(driver, SeleniumUtils.creaPass(), "belunco", "belunco", "belunco", "belunco");
@@ -198,7 +198,7 @@ public class BeluncoTests {
 		PO_PrivateView.clickOption(driver, "logout", "text", "Identifícate");
 	}
 
-	@Test // PASA
+	@Test 
 	public void LAcepInvVal() {
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
 		PO_LoginView.fillForm(driver, "1", "1");
@@ -215,7 +215,7 @@ public class BeluncoTests {
 		PO_PrivateView.clickOption(driver, "logout", "text", "Identifícate");
 	}
 
-	@Test // PASA
+	@Test 
 	public void MListAmiVal() {
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
 		PO_LoginView.fillForm(driver, "1", "1");
@@ -245,6 +245,74 @@ public class BeluncoTests {
 		PO_PublicationView.fillForm(driver, "Moda españa", "Dulceida como pionera.");
 		//Desconectamos
 		PO_PrivateView.clickOption(driver, "logout", "text", "Identifícate");
+	}
+	
+	@Test
+	public void RAdInVal() {
+		driver.navigate().to("http://localhost:8090/admin/login");
+		// Rellenamos el formulario
+		PO_LoginView.fillForm(driver, "5", "1");
+		PO_View.checkElement(driver, "text", "Usuarios");
+		//Accedemos a los usuarios y los contamos
+		List<WebElement> elementos = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
+				PO_View.getTimeout());
+		assertTrue(elementos.size() == 5);
+		//Desconectamos
+		PO_PrivateView.clickOption(driver, "logout", "text", "Identifícate");
+	}
+	
+	@Test
+	public void SAdInInVal() {
+		driver.navigate().to("http://localhost:8090/admin/login");
+		// Rellenamos el formulario
+		PO_LoginView.fillForm(driver, "1", "1");
+		PO_View.checkElement(driver, "text", "Access is denied");
+	}
+	
+	@Test
+	public void TAdLisUsrVal() {
+		driver.navigate().to("http://localhost:8090/admin/login");
+		// Rellenamos el formulario
+		PO_LoginView.fillForm(driver, "5", "1");
+		PO_View.checkElement(driver, "text", "Usuarios");
+		//Accedemos a los usuarios y los contamos
+		List<WebElement> elementos = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
+				PO_View.getTimeout());
+		assertTrue(elementos.size() == 5);
+		//Desconectamos
+		PO_PrivateView.clickOption(driver, "logout", "text", "Identifícate");
+	}
+	
+	@Test
+	public void UAdBorUsrVal() {
+		PO_HomeView.clickOption(driver, "signup", "class", "btn btn-primary");
+		PO_RegisterView.fillForm(driver, SeleniumUtils.creaPass(), "xxxxxx", "xxxxxx", "xxxxxx", "xxxxxx");
+		PO_PrivateView.clickOption(driver, "logout", "text", "Identifícate");
+		driver.navigate().to("http://localhost:8090/admin/login");
+		// Rellenamos el formulario
+		PO_LoginView.fillForm(driver, "5", "1");
+		PO_View.checkElement(driver, "text", "Usuarios");
+		//Accedemos a los usuarios y los contamos
+		List<WebElement> elementos = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
+				PO_View.getTimeout());
+		assertTrue(elementos.size() == 5);
+		//Borramos un usuario
+		elementos = SeleniumUtils.EsperaCargaPagina(driver, "text", "ELIMINAR USUARIO", 2);
+		elementos.get(elementos.size()-1).click();
+		assertFalse(elementos.get(elementos.size()-1).isEnabled());
+		//Desconectamos
+		PO_PrivateView.clickOption(driver, "logout", "text", "Identifícate");
+	}
+	
+	@Test
+	public void VAdBorUsrInVal() {
+		// Vamos al formulario de logueo.
+		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
+		// Rellenamos el formulario
+		PO_LoginView.fillForm(driver, "1", "1");
+		//Intentamos borrar pero el acceso es denegado
+		driver.navigate().to("http://localhost:8090/admin/2/delete");
+		PO_View.checkElement(driver, "text", "Access is denied");
 	}
 	
 	
