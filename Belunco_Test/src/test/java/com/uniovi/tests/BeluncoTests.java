@@ -76,7 +76,6 @@ public class BeluncoTests {
 	public void BRegInval() {
 		PO_HomeView.clickOption(driver, "signup", "class", "btn btn-primary");
 		PO_RegisterView.fillForm(driver, "beluncotest2@uniovi.es", "belunco", "belunco", "belunco1", "belunco");
-		//PO_RegisterView.checkKey(driver, "Error.signup.passwordConfirm.coincidence", PO_Properties.getSPANISH());
 		PO_View.checkElement(driver, "text", "Las contrasenas no coinciden");
 	}
 
@@ -151,6 +150,16 @@ public class BeluncoTests {
 
 	@Test // PASA
 	public void IInvVal() {
+//		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
+//		PO_LoginView.fillForm(driver, "1", "1");
+//		PO_View.checkElement(driver, "text", "Ver Usuarios");
+//		PO_View.checkElement(driver, "text", "Los usuarios que actualmente figuran en el sistema son los siguientes:");
+//		List<WebElement> elementos = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
+//				PO_View.getTimeout());
+//		assertTrue(elementos.size() == 5);
+//		elementos = SeleniumUtils.EsperaCargaPagina(driver, "text", "AÑADIR AMIGO", 2);
+//		elementos.get(0).click();
+//		PO_PrivateView.clickOption(driver, "logout", "text", "Identifícate");
 		
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
 		PO_LoginView.fillForm(driver, "1", "1");
