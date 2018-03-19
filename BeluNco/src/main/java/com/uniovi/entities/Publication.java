@@ -1,6 +1,5 @@
 package com.uniovi.entities;
 
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -11,27 +10,28 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Publication {
-	
+
 	@Id
 	@GeneratedValue
 	private long id;
-	
+
 	@ManyToOne
 	User autor;
-	
+
 	private String title;
 	private String descripcion;
 	private String date;
-	
-	public Publication() {}
-	
+
+	public Publication() {
+	}
+
 	public Publication(User autor, String title, String descripcion) {
 		super();
 		this.autor = autor;
 		this.title = title;
 		this.descripcion = descripcion;
 		this.date = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
-		
+
 	}
 
 	public Long getId() {
@@ -73,9 +73,5 @@ public class Publication {
 	public void setDate(String date) {
 		this.date = date;
 	}
-	
-	
-	
-	
-	
+
 }

@@ -22,24 +22,52 @@ import com.uniovi.validators.SignUpFormValidator;
 @Controller
 public class UsersController {
 
+	/**
+	 * Inyecta el servicio UsersService
+	 */
 	@Autowired
 	private UsersService usersService;
 
+	/**
+	 * Inyecta el servicio SecurityService
+	 */
 	@Autowired
 	private SecurityService securityService;
 
+	/**
+	 * Inyecta el servicio SignUpFormValidator
+	 */
 	@Autowired
 	private SignUpFormValidator signUpFormValidator;
 	
+	/**
+	 * Inyecta el servicio PeticionService
+	 */
 	@Autowired
 	private PeticionService peticionService;
 
+	/**
+	 * 
+	 * Permite registrarse a un usuario
+	 * 
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping(value = "/signup", method = RequestMethod.GET)
 	public String signup(Model model) {
 		model.addAttribute("user", new User());
 		return "signup";
 	}
 
+	/**
+	 * 
+	 * Permite registrar a un usuario si en el formulario no hay errores
+	 * 
+	 * @param user
+	 * @param result
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping(value = "/signup", method = RequestMethod.POST)
 	public String signup(@ModelAttribute User user, BindingResult result, Model model) {
 		signUpFormValidator.validate(user, result);
@@ -51,12 +79,30 @@ public class UsersController {
 		return "redirect:";
 	}
 
+	/**
+	 * 
+	 * Permite iniciar sesion en la aplicacion si no hay errores
+	 * 
+	 * @param model
+	 * @param error
+	 * @return
+	 */
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(Model model, @RequestParam(name = "error", required = false) String error) {
 		model.addAttribute("error", error);
 		return "login";
 	}
 
+	/**
+	 * 
+	 * Devuelve un listado de los usuarios de la aplicacion
+	 * 
+	 * @param model
+	 * @param searchText
+	 * @param pageable
+	 * @param principal
+	 * @return
+	 */
 	@RequestMapping("/user/list")
 	public String getListado(Model model, 
 			@RequestParam(value = "", required = false) String searchText, Pageable pageable, Principal principal) {
@@ -79,6 +125,14 @@ public class UsersController {
 		return "user/list";
 	}
 	
+	/**
+	 * 
+	 * Actualiza la lista de usuarios de la aplicacion
+	 * 
+	 * @param model
+	 * @param pageable
+	 * @return
+	 */
 	@RequestMapping("/user/list/update")
 	public String updateList(Model model, Pageable pageable) { 
 		Page<User> users = usersService.getUsers(pageable);
@@ -86,6 +140,14 @@ public class UsersController {
 		return "user/list :: tableUser";
 	}
 	
+	/**
+	 * 
+	 * Hace una peticion de amistad al usuario cuyo id se le pasa por parametro
+	 * 
+	 * @param model
+	 * @param id
+	 * @return
+	 */
 	@RequestMapping(value = "/user/{id}/makePeticion", method = RequestMethod.GET)
 	public String makePeticion(Model model, @PathVariable Long id) {
 		User friend = usersService.getUser(id);
@@ -97,13 +159,20 @@ public class UsersController {
 		return "redirect:/user/list";
 	}
 	
+	/**
+	 * 
+	 * Permite aceptar la peticion de amistad de un usuario cuyo id se le pasa por parametro
+	 * 
+	 * @param model
+	 * @param id
+	 * @return
+	 */
 	@RequestMapping(value = "/user/{id}/addFriend", method = RequestMethod.GET)
 	public String addFriend(Model model, @PathVariable Long id) {
 		User friend = usersService.getUser(id);
 		Authentication sesion = SecurityContextHolder.getContext().getAuthentication();
 		String email = sesion.getName();
 		User user = usersService.getUserByEmail(email);
-		//El ususario en sesion es el que acepta, "el amigo", por eso los parametros estan al reves
 		if(peticionService.isPeticion(user,friend)) {
 			user.addFriend(friend);
 			usersService.saveUserWithoutEncode(user);
