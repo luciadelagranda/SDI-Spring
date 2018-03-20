@@ -13,7 +13,7 @@
 			<button type="submit" class="btn btn-default" id="buscarButton" th:text="#{list.search}">Buscar</button>
 		</form>
 		<h2 th:text="#{list.users}">Usuarios</h2>
-		<p th:text="#{list.petmessage}">Los usuarios que actualmente figuran en el sistema son los siguientes:</p>
+		<p th:text="#{listSub.users}">Los usuarios que actualmente figuran en el sistema son los siguientes:</p>
 
 
 		<div class="table-responsive">
@@ -21,8 +21,8 @@
 				<thead>
 					<tr>
 						<th>EMAIL</th>
-						<th>NOMBRE</th>
-						<th>APELLIDOS</th>
+						<th th:text="#{list.name}">NOMBRE</th>
+						<th th:text="#{list.surname}">APELLIDOS</th>
 						<th class="col-md-1"></th>
 						<th class="col-md-1"></th>
 						<th class="col-md-1"></th>
@@ -34,7 +34,7 @@
 						<td th:text="${user.name}">Nombre del usuario</td>
 						<td th:text="${user.lastName}">Apellidos del usuario</td>
 						<td>
-						<button type=" button" th:id="${'deleteButton' + user.id}" class="btn btn-if" >ELIMINAR USUARIO
+						<button th:text="#{deleteButton.name}" type=" button" th:id="${'deleteButton' + user.id}" class="btn btn-if" >ELIMINAR USUARIO
 								</button> 
 								<script th:inline="javascript">
 									/*<![CDATA[*/
