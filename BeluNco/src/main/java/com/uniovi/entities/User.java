@@ -162,6 +162,7 @@ public class User {
 		for(User friend : friends)
 			friend.getFriends().remove(user);
 		friends = new HashSet<User>();
+		
 	}
 
 

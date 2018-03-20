@@ -108,12 +108,15 @@ public class InsertSampleDataService {
 		/*AÑADIMOS AMIGOS*/
 		user1.addFriend(user6);
 		user1.addFriend(user5);
-		usersService.saveUserWithoutEncode(user1);
 		user5.addFriend(user3);
-		usersService.saveUserWithoutEncode(user5);
 		user8.addFriend(user9);
-		usersService.saveUserWithoutEncode(user8);
 		user9.addFriend(user1);
+		
+		usersService.saveUserWithoutEncode(user1);
+		usersService.saveUserWithoutEncode(user3);
+		usersService.saveUserWithoutEncode(user5);
+		usersService.saveUserWithoutEncode(user6);
+		usersService.saveUserWithoutEncode(user8);
 		usersService.saveUserWithoutEncode(user9);
 		
 		/*AÑADIMOS PUBLICACIONES*/

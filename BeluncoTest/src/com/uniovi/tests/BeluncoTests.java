@@ -186,7 +186,7 @@ public class BeluncoTests {
 				PO_View.getTimeout());
 		assertTrue(elementos.size() == 5);
 		PO_HomeView.clickOption(driver, "peticion/list", "text", "Ver peticiones");
-		PO_View.checkElement(driver, "text", "Los usuarios que actualmente figuran en el sistema son los siguientes:");
+		PO_View.checkElement(driver, "text", "Lista de peticiones que tienes por aceptar:");
 		List<WebElement> elementos3 = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
 				PO_View.getTimeout());
 		assertTrue(elementos3.size() >= 1);
@@ -201,7 +201,7 @@ public class BeluncoTests {
 		PO_HomeView.clickOption(driver, "user/list", "text", "Ver Usuarios");
 		PO_View.checkElement(driver, "text", "Los usuarios que actualmente figuran en el sistema son los siguientes:");
 		PO_HomeView.clickOption(driver, "peticion/list", "text", "Ver peticiones");
-		PO_View.checkElement(driver, "text", "Los usuarios que actualmente figuran en el sistema son los siguientes:");
+		PO_View.checkElement(driver, "text", "Lista de peticiones que tienes por aceptar:");
 		List<WebElement> elementos2 = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
 				PO_View.getTimeout());
 		elementos2 = SeleniumUtils.EsperaCargaPagina(driver, "text", "ACEPTAR SOLICITUD", 2);
