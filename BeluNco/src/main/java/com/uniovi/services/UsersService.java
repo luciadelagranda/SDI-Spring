@@ -116,7 +116,11 @@ public class UsersService {
 	public User getUser(Long id) {
 		return usersRepository.findOne(id);
 	}
-
+	
+	/**
+	 * Elimina un usuario
+	 * @param id, id del usuario a eliminar
+	 */
 	public void deleteUser(Long id) {
 		usersRepository.delete(id);
 		

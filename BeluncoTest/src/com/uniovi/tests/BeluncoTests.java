@@ -69,7 +69,7 @@ public class BeluncoTests {
 	@Test 
 	public void CInVal() {
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
-		PO_LoginView.fillForm(driver, "1", "1");
+		PO_LoginView.fillForm(driver, "pedrito@gmail.com", "123456");
 		PO_View.checkElement(driver, "text", "Ver Usuarios");
 	}
 
@@ -87,7 +87,7 @@ public class BeluncoTests {
 		// Vamos al formulario de logueo.
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
 		// Rellenamos el formulario
-		PO_LoginView.fillForm(driver, "1", "1");
+		PO_LoginView.fillForm(driver, "pedrito@gmail.com", "123456");
 		PO_View.checkElement(driver, "text", "Ver Usuarios");
 		PO_View.checkElement(driver, "text", "Los usuarios que actualmente figuran en el sistema son los siguientes:");
 		List<WebElement> elementos = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
@@ -106,7 +106,7 @@ public class BeluncoTests {
 	@Test 
 	public void GBusUsrVal() {
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
-		PO_LoginView.fillForm(driver, "1", "1");
+		PO_LoginView.fillForm(driver, "pedrito@gmail.com", "123456");
 		PO_View.checkElement(driver, "text", "Ver Usuarios");
 		PO_View.checkElement(driver, "text", "Los usuarios que actualmente figuran en el sistema son los siguientes:");
 		List<WebElement> elementos = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr", 10);
@@ -130,7 +130,7 @@ public class BeluncoTests {
 	@Test 
 	public void IInvVal() {
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
-		PO_LoginView.fillForm(driver, "1", "1");
+		PO_LoginView.fillForm(driver, "pedrito@gmail.com", "123456");
 		PO_View.checkElement(driver, "text", "Ver Usuarios");
 		PO_View.checkElement(driver, "text", "Los usuarios que actualmente figuran en el sistema son los siguientes:");
 		List<WebElement> elementos = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr", 10);
@@ -150,7 +150,7 @@ public class BeluncoTests {
 	@Test
   public void JInvInVal() {
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
-		PO_LoginView.fillForm(driver, "1", "1");
+		PO_LoginView.fillForm(driver, "pedrito@gmail.com", "123456");
 		PO_View.checkElement(driver, "text", "Ver Usuarios");
 		PO_View.checkElement(driver, "text", "Los usuarios que actualmente figuran en el sistema son los siguientes:");
 		List<WebElement> elementos = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr", 10);
@@ -178,7 +178,7 @@ public class BeluncoTests {
 		PO_PrivateView.clickOption(driver, "logout", "text", "Identifícate");
 
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
-		PO_LoginView.fillForm(driver, "1", "1");
+		PO_LoginView.fillForm(driver, "pedrito@gmail.com", "123456");
 		PO_View.checkElement(driver, "text", "Ver Usuarios");
 		PO_HomeView.clickOption(driver, "user/list", "text", "Ver Usuarios");
 		PO_View.checkElement(driver, "text", "Los usuarios que actualmente figuran en el sistema son los siguientes:");
@@ -196,7 +196,7 @@ public class BeluncoTests {
 	@Test 
 	public void LAcepInvVal() {
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
-		PO_LoginView.fillForm(driver, "1", "1");
+		PO_LoginView.fillForm(driver, "pedrito@gmail.com", "123456");
 		PO_View.checkElement(driver, "text", "Ver Usuarios");
 		PO_HomeView.clickOption(driver, "user/list", "text", "Ver Usuarios");
 		PO_View.checkElement(driver, "text", "Los usuarios que actualmente figuran en el sistema son los siguientes:");
@@ -214,7 +214,7 @@ public class BeluncoTests {
 	@Test 
 	public void MListAmiVal() {
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
-		PO_LoginView.fillForm(driver, "1", "1");
+		PO_LoginView.fillForm(driver, "pedrito@gmail.com", "123456");
 		PO_HomeView.clickOption(driver, "friend/list", "text", "Ver amigos");
 		PO_View.checkElement(driver, "text",
 				"Los usuarios que actualmente figuran como tus amigos son los siguientes:");
@@ -229,7 +229,7 @@ public class BeluncoTests {
 		// Vamos al formulario de logueo.
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
 		// Rellenamos el formulario
-		PO_LoginView.fillForm(driver, "1", "1");
+		PO_LoginView.fillForm(driver, "pedrito@gmail.com", "123456");
 		PO_View.checkElement(driver, "text", "Ver Usuarios");
 		// Accedemos a publicaciones
 		List<WebElement> elementos = PO_View.checkElement(driver, "free", "//li[contains(@id, 'publication-menu')]/a");
@@ -248,7 +248,7 @@ public class BeluncoTests {
 		// Vamos al formulario de logueo.
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
 		// Rellenamos el formulario
-		PO_LoginView.fillForm(driver, "1", "1");
+		PO_LoginView.fillForm(driver, "pedrito@gmail.com", "123456");
 		PO_View.checkElement(driver, "text", "Ver Usuarios");
 		// Accedemos a publicaciones
 		List<WebElement> elementos = PO_View.checkElement(driver, "free", "//li[contains(@id, 'publication-menu')]/a");
@@ -266,7 +266,7 @@ public class BeluncoTests {
 	@Test
 	public void PLisPubAmiVal() {
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
-		PO_LoginView.fillForm(driver, "1", "1");
+		PO_LoginView.fillForm(driver, "pedrito@gmail.com", "123456");
 		PO_HomeView.clickOption(driver, "friend/list", "text", "Ver amigos");
 		PO_View.checkElement(driver, "text",
 				"Los usuarios que actualmente figuran como tus amigos son los siguientes:");
@@ -280,7 +280,7 @@ public class BeluncoTests {
 	public void RAdInVal() {
 		driver.navigate().to("http://localhost:8090/admin/login");
 		// Rellenamos el formulario
-		PO_LoginView.fillForm(driver, "5", "1");
+		PO_LoginView.fillForm(driver, "lucia@gmail.com", "123456");
 		PO_View.checkElement(driver, "text", "Usuarios");
 		//Accedemos a los usuarios y los contamos
 		List<WebElement> elementos = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
@@ -294,7 +294,7 @@ public class BeluncoTests {
 	public void SAdInInVal() {
 		driver.navigate().to("http://localhost:8090/admin/login");
 		// Rellenamos el formulario
-		PO_LoginView.fillForm(driver, "1", "1");
+		PO_LoginView.fillForm(driver, "pedrito@gmail.com", "123456");
 		PO_View.checkElement(driver, "text", "Access is denied");
 	}
 	
@@ -302,7 +302,7 @@ public class BeluncoTests {
 	public void TAdLisUsrVal() {
 		driver.navigate().to("http://localhost:8090/admin/login");
 		// Rellenamos el formulario
-		PO_LoginView.fillForm(driver, "5", "1");
+		PO_LoginView.fillForm(driver, "lucia@gmail.com", "123456");
 		PO_View.checkElement(driver, "text", "Usuarios");
 		//Accedemos a los usuarios y los contamos
 		List<WebElement> elementos = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
@@ -319,7 +319,7 @@ public class BeluncoTests {
 		PO_PrivateView.clickOption(driver, "logout", "text", "Identifícate");
 		driver.navigate().to("http://localhost:8090/admin/login");
 		// Rellenamos el formulario
-		PO_LoginView.fillForm(driver, "5", "1");
+		PO_LoginView.fillForm(driver, "lucia@gmail.com", "123456");
 		PO_View.checkElement(driver, "text", "Usuarios");
 		//Accedemos a los usuarios y los contamos
 		List<WebElement> elementos = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
@@ -338,7 +338,7 @@ public class BeluncoTests {
 		// Vamos al formulario de logueo.
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
 		// Rellenamos el formulario
-		PO_LoginView.fillForm(driver, "1", "1");
+		PO_LoginView.fillForm(driver, "pedrito@gmail.com", "123456");
 		//Intentamos borrar pero el acceso es denegado
 		driver.navigate().to("http://localhost:8090/admin/2/delete");
 		PO_View.checkElement(driver, "text", "Access is denied");
@@ -347,7 +347,7 @@ public class BeluncoTests {
   @Test
 	public void QLisPubAmiInVal() {
 		PO_HomeView.clickOption(driver, "login", "class", "btn btn-primary");
-		PO_LoginView.fillForm(driver, "1", "1");
+		PO_LoginView.fillForm(driver, "pedrito@gmail.com", "123456");
 		driver.navigate().to("http://localhost:8090/publication/list/2");
 		List<WebElement> elementos2 = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody",
 				PO_View.getTimeout());
