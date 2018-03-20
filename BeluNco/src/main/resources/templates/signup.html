@@ -15,7 +15,7 @@
         <label class="control-label col-sm-2" for="email">Email:</label>
         <div class="col-sm-10">
             <input type="text" class="form-control" name="email"
-                placeholder="pepito@gmail.com" required="true" />
+                th:placeholder="#{login.ejemplo}" required="true" />
                 <span class="text-danger" th:if="${#fields.hasErrors('email')}" 
             	th:errors="*{email}"/>
             
@@ -25,7 +25,7 @@
         <label class="control-label col-sm-2" for="name"  th:text="#{list.name}">Nombre:</label>
         <div class="col-sm-10">
             <input type="text" class="form-control" name="name"
-                placeholder="Ejemplo: Juan" required="true" />
+                th:placeholder="#{login.rname}" required="true" />
                  <span class="text-danger" th:if="${#fields.hasErrors('name')}" 
                 	th:errors="*{name}"/>
                 
@@ -35,7 +35,7 @@
         <label class="control-label col-sm-2" for="lastName" th:text="#{list.surname}">Apellidos:</label>
         <div class="col-sm-10">
             <input type="text" class="form-control" name="lastName"
-                placeholder="Ejemplo: Peréz Almonte" required="true" /> 
+                th:placeholder="#{login.username}" required="true" /> 
                <span class="text-danger"  th:if="${#fields.hasErrors('lastName')}" 
                 	th:errors="*{lastName}"/>
         </div>
@@ -44,7 +44,7 @@
         <label class="control-label col-sm-2" for="password">Password:</label>
         <div class="col-sm-10">
             <input type="password" class="form-control" name="password"
-                placeholder="Entre el Password" /> 
+                th:placeholder="#{login.p}" /> 
                 <span class="text-danger" th:if="${#fields.hasErrors('password')}" 
             	th:errors="*{password}"/>
         
@@ -54,7 +54,7 @@
         <label class="control-label col-sm-2" for="passwordConfirm"  th:text="#{signup.passwordRepeat}">Repita el Password:</label>
         <div class="col-sm-10">
             <input type="password" class="form-control" name="passwordConfirm"
-                placeholder="Repita el Password" />
+               th:placeholder="#{login.p2}" />
                 <span class="text-danger" th:if="${#fields.hasErrors('passwordConfirm')}" 
             	th:errors="*{passwordConfirm}"/>
             

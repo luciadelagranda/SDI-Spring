@@ -5,15 +5,15 @@
 
 	<header th:replace="fragments/nav" />
 	<div class="container">
-		<h2>Lista de las publicaciones realizadas por tu amigo.</h2>
+		<h2 th:text="#{pubs.friendslist}">Lista de las publicaciones realizadas por tu amigo</h2>
 
 		<div class="table-responsive">
 			<table class="table table-hover">
 				<thead>
 					<tr>
-						<th>Fecha</th>
-						<th>Titulo</th>
-						<th>Descripción</th>
+						<th th:text="#{pubs.fecha}">Fecha</th>
+						<th th:text="#{pubs.titulo}">Titulo</th>
+						<th th:text="#{pubs.descr}">Descripción</th>
 						<th class="col-md-1"></th>
 						<th class="col-md-1"></th>
 						<th class="col-md-1"></th>
